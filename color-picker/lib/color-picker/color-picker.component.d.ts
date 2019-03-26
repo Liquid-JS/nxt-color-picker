@@ -1,0 +1,153 @@
+import { AfterViewInit, ChangeDetectorRef, ElementRef, OnDestroy, OnInit } from '@angular/core';
+import { ColorFormats, Hsla, Rgba } from '../../util/formats';
+import { SliderPosition } from '../../util/helpers';
+import { AlphaChannel, ColorMode, ColorModeInternal, DialogDisplay, DialogPosition, OutputFormat, Position } from '../../util/types';
+import { ColorPickerService } from '../color-picker.service';
+export declare class ColorPickerComponent implements OnInit, OnDestroy, AfterViewInit {
+    private elRef;
+    private cdRef;
+    private service;
+    readonly alphaChannel: typeof AlphaChannel;
+    readonly colorModeInternal: typeof ColorModeInternal;
+    readonly dialogDisplay: typeof DialogDisplay;
+    private isIE10;
+    private hsva;
+    private width;
+    private height;
+    private outputColor;
+    private initialColor;
+    private fallbackColor;
+    private listenerResize;
+    private listenerMouseDown;
+    private directiveInstance;
+    private sliderH;
+    private directiveElementRef;
+    private dialogArrowSize;
+    private dialogArrowOffset;
+    private dialogInputFields;
+    private useRootViewContainer;
+    show: boolean;
+    hidden: boolean;
+    top: number;
+    left: number;
+    position: Position;
+    format: ColorFormats;
+    slider: SliderPosition;
+    hexText: string;
+    hexAlpha: number;
+    hslaText: Hsla;
+    rgbaText: Rgba;
+    arrowTop: number;
+    selectedColor: string;
+    hueSliderColor: string;
+    alphaSliderColor: string;
+    svSliderWhite: boolean;
+    hueSliderWhite: boolean;
+    valueSliderWhite: boolean;
+    alphaSliderWhite: boolean;
+    cpWidth: number;
+    cpHeight: number;
+    cpColorMode: ColorModeInternal;
+    cpAlphaChannel: AlphaChannel;
+    cpOutputFormat: OutputFormat;
+    cpDisableInput: boolean;
+    cpDialogDisplay: DialogDisplay;
+    cpIgnoredElements: any;
+    cpSaveClickOutside: boolean;
+    cpCloseClickOutside: boolean;
+    cpPosition: DialogPosition;
+    cpPositionOffset: number;
+    cpOKButton: boolean;
+    cpOKButtonText: string;
+    cpOKButtonClass: string;
+    cpCancelButton: boolean;
+    cpCancelButtonText: string;
+    cpCancelButtonClass: string;
+    cpPresetLabel: string;
+    cpPresetColors: string[];
+    cpMaxPresetColorsLength: number;
+    cpPresetEmptyMessage: string;
+    cpPresetEmptyMessageClass: string;
+    cpAddColorButton: boolean;
+    cpAddColorButtonText: string;
+    cpRemoveColorButtonClass: string;
+    private dialogElement;
+    handleEsc(event: any): void;
+    handleEnter(event: any): void;
+    constructor(elRef: ElementRef, cdRef: ChangeDetectorRef, service: ColorPickerService);
+    ngOnInit(): void;
+    ngOnDestroy(): void;
+    ngAfterViewInit(): void;
+    openDialog(color: any, emit?: boolean): void;
+    closeDialog(): void;
+    setupDialog(instance: any, elementRef: ElementRef, color: any, cpWidth: string, cpHeight: string, cpDialogDisplay: DialogDisplay, cpFallbackColor: string, cpColorMode: ColorMode, cpAlphaChannel: AlphaChannel, cpOutputFormat: OutputFormat, cpDisableInput: boolean, cpIgnoredElements: any, cpSaveClickOutside: boolean, cpCloseClickOutside: boolean, cpUseRootViewContainer: boolean, cpPosition: DialogPosition, cpPositionOffset: string, cpPositionRelativeToArrow: boolean, cpPresetLabel: string, cpPresetColors: string[], cpMaxPresetColorsLength: number, cpPresetEmptyMessage: string, cpPresetEmptyMessageClass: string, cpOKButton: boolean, cpOKButtonClass: string, cpOKButtonText: string, cpCancelButton: boolean, cpCancelButtonClass: string, cpCancelButtonText: string, cpAddColorButton: boolean, cpAddColorButtonText: string, cpRemoveColorButtonClass: string): void;
+    setInitialColor(color: any): void;
+    setPresetConfig(cpPresetLabel: string, cpPresetColors: string[]): void;
+    setColorFromString(value: string, emit?: boolean, update?: boolean): void;
+    onResize(): void;
+    onDragEnd(slider: string): void;
+    onDragStart(slider: string): void;
+    onMouseDown(event: MouseEvent): void;
+    onAcceptColor(event: Event): void;
+    onCancelColor(event: Event): void;
+    onFormatToggle(change: number): void;
+    onColorChange(value: {
+        s: number;
+        v: number;
+        rgX: number;
+        rgY: number;
+    }): void;
+    onHueChange(value: {
+        v: number;
+        rgX: number;
+    }): void;
+    onValueChange(value: {
+        v: number;
+        rgX: number;
+    }): void;
+    onAlphaChange(value: {
+        v: number;
+        rgX: number;
+    }): void;
+    onHexInput(value: string | null): void;
+    onRedInput(value: {
+        v: number;
+        rg: number;
+    }): void;
+    onBlueInput(value: {
+        v: number;
+        rg: number;
+    }): void;
+    onGreenInput(value: {
+        v: number;
+        rg: number;
+    }): void;
+    onHueInput(value: {
+        v: number;
+        rg: number;
+    }): void;
+    onValueInput(value: {
+        v: number;
+        rg: number;
+    }): void;
+    onAlphaInput(value: {
+        v: number;
+        rg: number;
+    }): void;
+    onLightnessInput(value: {
+        v: number;
+        rg: number;
+    }): void;
+    onSaturationInput(value: {
+        v: number;
+        rg: number;
+    }): void;
+    onAddPresetColor(event: any, value: string): void;
+    onRemovePresetColor(event: any, value: string): void;
+    private openColorPicker;
+    private closeColorPicker;
+    private updateColorPicker;
+    private setDialogPosition;
+    private isDescendant;
+    private createDialogBox;
+}
