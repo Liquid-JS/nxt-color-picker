@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+    <base href="https://liquid-js.github.io/color-picker/">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+    <link rel="icon"
+        type="image/x-icon"
+        href="favicon.ico">
+    <style>
+        .loading,
+        .loading:after,
+        .loading:before {
+            content: ' ';
+            top: 0;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            animation: spinner 1600ms infinite ease-in-out;
+        }
+
+        .loading {
+            color: #555;
+            margin: 64px auto;
+            position: relative;
+            animation-delay: -160ms;
+        }
+
+        .loading:after {
+            left: 64px;
+        }
+
+        .loading:before {
+            left: -64px;
+            animation-delay: -320ms;
+        }
+
+        .loading:after,
+        .loading:before {
+            position: absolute;
+        }
+
+        @keyframes spinner {
+            40% {
+                box-shadow: 0 40px 0 0;
+            }
+
+            0%,
+            80%,
+            100% {
+                box-shadow: 0 40px 0 -20px;
+            }
+        }
+    </style>
+<link rel="stylesheet" href="styles.d758b023c09a03826f51.css"></head>
+
+<body>
+    <app-root>
+        <div class="loading"></div>
+    </app-root>
+<script type="text/javascript" src="runtime.afdff3c2fbe548c25b97.js"></script><script type="text/javascript" src="es2015-polyfills.1e061e94481d52e02679.js" nomodule></script><script type="text/javascript" src="polyfills.4965767c9aa5b6bd94eb.js"></script><script type="text/javascript" src="main.4c422e2d008aa8426445.js"></script></body>
+
+</html>
