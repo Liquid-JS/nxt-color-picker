@@ -32,9 +32,6 @@ MIT
 @angular/platform-browser
 MIT
 
-@liquid-js/ngx-color-picker
-MIT
-
 core-js
 MIT
 Copyright (c) 2014-2019 Denis Pushkarev
@@ -58,7 +55,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-ngx-color-picker
+nxt-color-picker
 MIT License
 
 Copyright (c) 2019 Liquid-JS
