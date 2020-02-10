@@ -14,15 +14,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"], {
   /***/
-  "../../dist/nxt-color-picker/__ivy_ngcc__/fesm2015/nxt-color-picker.js":
-  /*!*******************************************************************************************************!*\
-    !*** C:/Development/nxt-color-picker/dist/nxt-color-picker/__ivy_ngcc__/fesm2015/nxt-color-picker.js ***!
-    \*******************************************************************************************************/
+  "../../dist/nxt-color-picker/fesm2015/nxt-color-picker.js":
+  /*!******************************************************************************************!*\
+    !*** C:/Development/nxt-color-picker/dist/nxt-color-picker/fesm2015/nxt-color-picker.js ***!
+    \******************************************************************************************/
 
-  /*! exports provided: AlphaChannel, Cmyk, ColorFormat, ColorPickerDirective, ColorPickerModule, DialogDisplay, DialogPosition, Hsla, Hsva, OutputFormat, Rgba, calculateContrast, calculateLuminance, calculateMinimumAlpha, compositeAlpha, compositeColors, compositeComponent, denormalizeRGBA, formatOutput, hsla2hsva, hsva2hsla, hsvaToRgba, rgbaToCmyk, rgbaToHex, rgbaToHsva, stringToHsva, ɵa, ɵb, ɵc, ɵd */
+  /*! exports provided: AlphaChannel, Cmyk, ColorFormat, ColorPickerDirective, ColorPickerModule, DialogDisplay, DialogPosition, Hsla, Hsva, OutputFormat, Rgba, calculateContrast, calculateLuminance, calculateMinimumAlpha, compositeAlpha, compositeColors, compositeComponent, denormalizeRGBA, formatOutput, hsla2hsva, hsva2hsla, hsvaToRgba, rgbaToCmyk, rgbaToHex, rgbaToHsva, stringToHsva */
 
   /***/
-  function distNxtColorPicker__ivy_ngcc__Fesm2015NxtColorPickerJs(module, __webpack_exports__, __webpack_require__) {
+  function distNxtColorPickerFesm2015NxtColorPickerJs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
@@ -182,1160 +182,116 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     __webpack_require__.d(__webpack_exports__, "stringToHsva", function () {
       return stringToHsva;
     });
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "ɵa", function () {
-      return TextDirective;
-    });
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "ɵb", function () {
-      return SliderDirective;
-    });
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "ɵc", function () {
-      return ColorPickerComponent;
-    });
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "ɵd", function () {
-      return ColorPickerService;
-    });
     /* harmony import */
 
 
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "../../node_modules/tslib/tslib.es6.js");
-    /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
     /*! @angular/core */
     "../../node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
     /* harmony import */
 
 
-    var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! @angular/common */
     "../../node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
-    var _c0 = ["dialogPopup"];
+    var SliderPosition = function SliderPosition(h, s, v, a) {
+      _classCallCheck(this, SliderPosition);
 
-    function ColorPickerComponent_div_2_Template(rf, ctx) {
-      if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "div", 16);
-      }
-
-      if (rf & 2) {
-        var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngClass", "color-picker__arrow--" + ctx_r1.cpPosition);
-      }
-    }
-
-    var _c1 = function _c1(a0) {
-      return {
-        backgroundColor: a0
-      };
+      this.h = h;
+      this.s = s;
+      this.v = v;
+      this.a = a;
     };
 
-    var _c2 = function _c2(a0) {
-      return {
-        "color-picker__cursor--light": a0
-      };
+    var SliderDimension = function SliderDimension(h, s, v, a) {
+      _classCallCheck(this, SliderDimension);
+
+      this.h = h;
+      this.s = s;
+      this.v = v;
+      this.a = a;
     };
 
-    var _c3 = function _c3(a0, a1) {
-      return {
-        top: a0,
-        left: a1
-      };
-    };
+    var Position;
 
-    function ColorPickerComponent_div_3_Template(rf, ctx) {
-      if (rf & 1) {
-        var _r11 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+    (function (Position) {
+      Position["fixed"] = "fixed";
+      Position["relative"] = "relative";
+      Position["static"] = "static";
+      Position["absolute"] = "absolute";
+    })(Position || (Position = {}));
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 17);
+    var ColorModeInternal;
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("newValue", function ColorPickerComponent_div_3_Template_div_newValue_0_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r11);
+    (function (ColorModeInternal) {
+      ColorModeInternal[ColorModeInternal["color"] = 0] = "color";
+      ColorModeInternal[ColorModeInternal["grayscale"] = 1] = "grayscale";
+      ColorModeInternal[ColorModeInternal["presets"] = 2] = "presets";
+    })(ColorModeInternal || (ColorModeInternal = {}));
 
-          var ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+    function parseColorMode(mode) {
+      switch (mode.toString().toUpperCase()) {
+        case '1':
+        case 'C':
+        case 'COLOR':
+          return ColorModeInternal.color;
 
-          return ctx_r10.onColorChange($event);
-        })("dragStart", function ColorPickerComponent_div_3_Template_div_dragStart_0_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r11);
+        case '2':
+        case 'G':
+        case 'GRAYSCALE':
+          return ColorModeInternal.grayscale;
 
-          var ctx_r12 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+        case '3':
+        case 'P':
+        case 'PRESETS':
+          return ColorModeInternal.presets;
 
-          return ctx_r12.onDragStart("saturation-lightness");
-        })("dragEnd", function ColorPickerComponent_div_3_Template_div_dragEnd_0_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r11);
-
-          var ctx_r13 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-
-          return ctx_r13.onDragEnd("saturation-lightness");
-        });
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](1, "div", 18);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-      }
-
-      if (rf & 2) {
-        var ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rgX", 1)("rgY", 1)("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](5, _c1, ctx_r2.hueSliderColor || ""));
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](7, _c2, ctx_r2.svSliderLight))("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction2"](9, _c3, ((ctx_r2.slider == null ? null : ctx_r2.slider.v) || 0) * 100 + "%", ((ctx_r2.slider == null ? null : ctx_r2.slider.s) || 0) * 100 + "%"));
+        default:
+          return ColorModeInternal.color;
       }
     }
 
-    var _c4 = function _c4(a0) {
-      return {
-        "color-picker__add-selected--light": a0
-      };
-    };
+    function sizeToString(val) {
+      var strVal = ((val || 'auto') + '').trim().toLowerCase();
 
-    function ColorPickerComponent_button_8_Template(rf, ctx) {
-      if (rf & 1) {
-        var _r15 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "button", 19);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ColorPickerComponent_button_8_Template_button_click_0_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r15);
-
-          var ctx_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-
-          return ctx_r14.onAddPresetColor(ctx_r14.selectedColor);
-        });
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnamespaceSVG"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "svg", 20);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](2, "path", 21);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](3, "path", 22);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+      if (strVal.match(/^\d+[a-z%]+$/) || strVal == 'auto') {
+        return strVal;
       }
 
-      if (rf & 2) {
-        var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+      var num = parseInt(strVal, 10);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("title", ctx_r3.cpAddColorButtonText)("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](2, _c4, ctx_r3.alphaSliderLight));
+      if (!Number.isNaN(num)) {
+        return "".concat(num, "px");
       }
+
+      return 'auto';
     }
 
-    var _c5 = function _c5(a0) {
-      return {
-        left: a0
-      };
-    };
-
-    function ColorPickerComponent_div_10_Template(rf, ctx) {
-      if (rf & 1) {
-        var _r17 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 23);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("newValue", function ColorPickerComponent_div_10_Template_div_newValue_0_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r17);
-
-          var ctx_r16 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-
-          return ctx_r16.onHueChange($event);
-        })("dragStart", function ColorPickerComponent_div_10_Template_div_dragStart_0_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r17);
-
-          var ctx_r18 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-
-          return ctx_r18.onDragStart("hue");
-        })("dragEnd", function ColorPickerComponent_div_10_Template_div_dragEnd_0_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r17);
-
-          var ctx_r19 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-
-          return ctx_r19.onDragEnd("hue");
-        });
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](1, "div", 24);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    function composedPath(event) {
+      if (event.composedPath) {
+        return event.composedPath();
       }
 
-      if (rf & 2) {
-        var ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+      var _evt = event;
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rgX", 1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](3, _c2, ctx_r4.hueSliderLight))("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](5, _c5, ((ctx_r4.slider == null ? null : ctx_r4.slider.h) || 0) * 100 + "%"));
+      if (_evt.path) {
+        return _evt.path;
       }
+
+      var t = _evt.target;
+      _evt.path = [];
+
+      while (t.parentNode !== null) {
+        _evt.path.push(t);
+
+        t = t.parentNode;
+      }
+
+      _evt.path.push(document, window);
+
+      return _evt.path;
     }
-
-    function ColorPickerComponent_div_11_Template(rf, ctx) {
-      if (rf & 1) {
-        var _r21 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 25);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("newValue", function ColorPickerComponent_div_11_Template_div_newValue_0_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r21);
-
-          var ctx_r20 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-
-          return ctx_r20.onValueChange($event);
-        })("dragStart", function ColorPickerComponent_div_11_Template_div_dragStart_0_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r21);
-
-          var ctx_r22 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-
-          return ctx_r22.onDragStart("value");
-        })("dragEnd", function ColorPickerComponent_div_11_Template_div_dragEnd_0_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r21);
-
-          var ctx_r23 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-
-          return ctx_r23.onDragEnd("value");
-        });
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](1, "div", 24);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-      }
-
-      if (rf & 2) {
-        var ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rgX", 1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](3, _c2, ctx_r5.valueSliderLight))("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](5, _c5, (1 - ((ctx_r5.slider == null ? null : ctx_r5.slider.v) || 0)) * 100 + "%"));
-      }
-    }
-
-    var _c6 = function _c6(a0) {
-      return {
-        backgroundImage: a0
-      };
-    };
-
-    function ColorPickerComponent_div_12_Template(rf, ctx) {
-      if (rf & 1) {
-        var _r25 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 26);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("newValue", function ColorPickerComponent_div_12_Template_div_newValue_0_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r25);
-
-          var ctx_r24 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-
-          return ctx_r24.onAlphaChange($event);
-        })("dragStart", function ColorPickerComponent_div_12_Template_div_dragStart_0_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r25);
-
-          var ctx_r26 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-
-          return ctx_r26.onDragStart("alpha");
-        })("dragEnd", function ColorPickerComponent_div_12_Template_div_dragEnd_0_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r25);
-
-          var ctx_r27 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-
-          return ctx_r27.onDragEnd("alpha");
-        });
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 27);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](2, "div", 24);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-      }
-
-      if (rf & 2) {
-        var ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rgX", 1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](4, _c6, ctx_r6.alphaSliderColor || ""));
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](6, _c2, ctx_r6.alphaSliderLight))("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](8, _c5, ((ctx_r6.slider == null ? null : ctx_r6.slider.a) || 0) * 100 + "%"));
-      }
-    }
-
-    function ColorPickerComponent_div_13_ng_container_2_div_5_Template(rf, ctx) {
-      if (rf & 1) {
-        var _r34 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 33);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "input", 37);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("keyup.enter", function ColorPickerComponent_div_13_ng_container_2_div_5_Template_input_keyup_enter_1_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r34);
-
-          var ctx_r33 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
-
-          return ctx_r33.onAccept($event);
-        })("newValue", function ColorPickerComponent_div_13_ng_container_2_div_5_Template_input_newValue_1_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r34);
-
-          var ctx_r35 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
-
-          return ctx_r35.onAlphaInput($event);
-        });
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "span", 35);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](3, "A");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-      }
-
-      if (rf & 2) {
-        var ctx_r32 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rg", 1)("value", ctx_r32.hslaText == null ? null : ctx_r32.hslaText.a);
-      }
-    }
-
-    function ColorPickerComponent_div_13_ng_container_2_Template(rf, ctx) {
-      if (rf & 1) {
-        var _r37 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementContainerStart"](0);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 33);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "input", 34);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("keyup.enter", function ColorPickerComponent_div_13_ng_container_2_Template_input_keyup_enter_2_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r37);
-
-          var ctx_r36 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
-
-          return ctx_r36.onAccept($event);
-        })("newValue", function ColorPickerComponent_div_13_ng_container_2_Template_input_newValue_2_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r37);
-
-          var ctx_r38 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
-
-          return ctx_r38.onValueInput($event);
-        });
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "span", 35);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4, "V");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](5, ColorPickerComponent_div_13_ng_container_2_div_5_Template, 4, 2, "div", 36);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementContainerEnd"]();
-      }
-
-      if (rf & 2) {
-        var ctx_r28 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rg", 100)("value", ctx_r28.hslaText == null ? null : ctx_r28.hslaText.l);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r28.cpAlphaChannel != ctx_r28.alphaChannel.disabled);
-      }
-    }
-
-    function ColorPickerComponent_div_13_ng_template_3_ng_container_1_div_13_Template(rf, ctx) {
-      if (rf & 1) {
-        var _r44 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 33);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "input", 37);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("keyup.enter", function ColorPickerComponent_div_13_ng_template_3_ng_container_1_div_13_Template_input_keyup_enter_1_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r44);
-
-          var ctx_r43 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](4);
-
-          return ctx_r43.onAccept($event);
-        })("newValue", function ColorPickerComponent_div_13_ng_template_3_ng_container_1_div_13_Template_input_newValue_1_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r44);
-
-          var ctx_r45 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](4);
-
-          return ctx_r45.onAlphaInput($event);
-        });
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "span", 35);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](3, "A");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-      }
-
-      if (rf & 2) {
-        var ctx_r42 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](4);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rg", 1)("value", ctx_r42.hslaText == null ? null : ctx_r42.hslaText.a);
-      }
-    }
-
-    function ColorPickerComponent_div_13_ng_template_3_ng_container_1_Template(rf, ctx) {
-      if (rf & 1) {
-        var _r47 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementContainerStart"](0);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 33);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "input", 41);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("keyup.enter", function ColorPickerComponent_div_13_ng_template_3_ng_container_1_Template_input_keyup_enter_2_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r47);
-
-          var ctx_r46 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
-
-          return ctx_r46.onAccept($event);
-        })("newValue", function ColorPickerComponent_div_13_ng_template_3_ng_container_1_Template_input_newValue_2_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r47);
-
-          var ctx_r48 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
-
-          return ctx_r48.onHueInput($event);
-        });
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "span", 35);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4, "H");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "div", 33);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "input", 34);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("keyup.enter", function ColorPickerComponent_div_13_ng_template_3_ng_container_1_Template_input_keyup_enter_6_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r47);
-
-          var ctx_r49 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
-
-          return ctx_r49.onAccept($event);
-        })("newValue", function ColorPickerComponent_div_13_ng_template_3_ng_container_1_Template_input_newValue_6_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r47);
-
-          var ctx_r50 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
-
-          return ctx_r50.onSaturationInput($event);
-        });
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "span", 35);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](8, "S");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "div", 33);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "input", 34);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("keyup.enter", function ColorPickerComponent_div_13_ng_template_3_ng_container_1_Template_input_keyup_enter_10_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r47);
-
-          var ctx_r51 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
-
-          return ctx_r51.onAccept($event);
-        })("newValue", function ColorPickerComponent_div_13_ng_template_3_ng_container_1_Template_input_newValue_10_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r47);
-
-          var ctx_r52 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
-
-          return ctx_r52.onLightnessInput($event);
-        });
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "span", 35);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](12, "L");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](13, ColorPickerComponent_div_13_ng_template_3_ng_container_1_div_13_Template, 4, 2, "div", 36);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementContainerEnd"]();
-      }
-
-      if (rf & 2) {
-        var ctx_r39 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rg", 360)("value", ctx_r39.hslaText == null ? null : ctx_r39.hslaText.h);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rg", 100)("value", ctx_r39.hslaText == null ? null : ctx_r39.hslaText.s);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rg", 100)("value", ctx_r39.hslaText == null ? null : ctx_r39.hslaText.l);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r39.cpAlphaChannel != ctx_r39.alphaChannel.disabled);
-      }
-    }
-
-    function ColorPickerComponent_div_13_ng_template_3_ng_container_2_div_13_Template(rf, ctx) {
-      if (rf & 1) {
-        var _r55 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 33);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "input", 37);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("keyup.enter", function ColorPickerComponent_div_13_ng_template_3_ng_container_2_div_13_Template_input_keyup_enter_1_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r55);
-
-          var ctx_r54 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](4);
-
-          return ctx_r54.onAccept($event);
-        })("newValue", function ColorPickerComponent_div_13_ng_template_3_ng_container_2_div_13_Template_input_newValue_1_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r55);
-
-          var ctx_r56 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](4);
-
-          return ctx_r56.onAlphaInput($event);
-        });
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "span", 35);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](3, "A");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-      }
-
-      if (rf & 2) {
-        var ctx_r53 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](4);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rg", 1)("value", ctx_r53.hslaText == null ? null : ctx_r53.hslaText.a);
-      }
-    }
-
-    function ColorPickerComponent_div_13_ng_template_3_ng_container_2_Template(rf, ctx) {
-      if (rf & 1) {
-        var _r58 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementContainerStart"](0);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 33);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "input", 42);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("keyup.enter", function ColorPickerComponent_div_13_ng_template_3_ng_container_2_Template_input_keyup_enter_2_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r58);
-
-          var ctx_r57 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
-
-          return ctx_r57.onAccept($event);
-        })("newValue", function ColorPickerComponent_div_13_ng_template_3_ng_container_2_Template_input_newValue_2_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r58);
-
-          var ctx_r59 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
-
-          return ctx_r59.onRedInput($event);
-        });
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "span", 35);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4, "R");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "div", 33);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "input", 42);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("keyup.enter", function ColorPickerComponent_div_13_ng_template_3_ng_container_2_Template_input_keyup_enter_6_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r58);
-
-          var ctx_r60 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
-
-          return ctx_r60.onAccept($event);
-        })("newValue", function ColorPickerComponent_div_13_ng_template_3_ng_container_2_Template_input_newValue_6_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r58);
-
-          var ctx_r61 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
-
-          return ctx_r61.onGreenInput($event);
-        });
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "span", 35);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](8, "G");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "div", 33);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "input", 42);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("keyup.enter", function ColorPickerComponent_div_13_ng_template_3_ng_container_2_Template_input_keyup_enter_10_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r58);
-
-          var ctx_r62 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
-
-          return ctx_r62.onAccept($event);
-        })("newValue", function ColorPickerComponent_div_13_ng_template_3_ng_container_2_Template_input_newValue_10_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r58);
-
-          var ctx_r63 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
-
-          return ctx_r63.onBlueInput($event);
-        });
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "span", 35);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](12, "B");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](13, ColorPickerComponent_div_13_ng_template_3_ng_container_2_div_13_Template, 4, 2, "div", 36);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementContainerEnd"]();
-      }
-
-      if (rf & 2) {
-        var ctx_r40 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rg", 255)("value", ctx_r40.rgbaText == null ? null : ctx_r40.rgbaText.r);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rg", 255)("value", ctx_r40.rgbaText == null ? null : ctx_r40.rgbaText.g);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rg", 255)("value", ctx_r40.rgbaText == null ? null : ctx_r40.rgbaText.b);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r40.cpAlphaChannel != ctx_r40.alphaChannel.disabled);
-      }
-    }
-
-    function ColorPickerComponent_div_13_ng_template_3_ng_container_3_div_5_Template(rf, ctx) {
-      if (rf & 1) {
-        var _r66 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 33);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "input", 37);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("keyup.enter", function ColorPickerComponent_div_13_ng_template_3_ng_container_3_div_5_Template_input_keyup_enter_1_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r66);
-
-          var ctx_r65 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](4);
-
-          return ctx_r65.onAccept($event);
-        })("newValue", function ColorPickerComponent_div_13_ng_template_3_ng_container_3_div_5_Template_input_newValue_1_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r66);
-
-          var ctx_r67 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](4);
-
-          return ctx_r67.onAlphaInput($event);
-        });
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "span", 35);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](3, "A");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-      }
-
-      if (rf & 2) {
-        var ctx_r64 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](4);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rg", 1)("value", ctx_r64.hexAlpha);
-      }
-    }
-
-    function ColorPickerComponent_div_13_ng_template_3_ng_container_3_Template(rf, ctx) {
-      if (rf & 1) {
-        var _r69 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementContainerStart"](0);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 33);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "input", 43);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("blur", function ColorPickerComponent_div_13_ng_template_3_ng_container_3_Template_input_blur_2_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r69);
-
-          var ctx_r68 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
-
-          return ctx_r68.onHexInput(null);
-        })("keyup.enter", function ColorPickerComponent_div_13_ng_template_3_ng_container_3_Template_input_keyup_enter_2_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r69);
-
-          var ctx_r70 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
-
-          return ctx_r70.onAccept($event);
-        })("newValue", function ColorPickerComponent_div_13_ng_template_3_ng_container_3_Template_input_newValue_2_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r69);
-
-          var ctx_r71 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
-
-          return ctx_r71.onHexInput($event);
-        });
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "span", 35);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4, "Hex");
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](5, ColorPickerComponent_div_13_ng_template_3_ng_container_3_div_5_Template, 4, 2, "div", 36);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementContainerEnd"]();
-      }
-
-      if (rf & 2) {
-        var ctx_r41 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("value", ctx_r41.hexText);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r41.cpAlphaChannel == ctx_r41.alphaChannel.forced);
-      }
-    }
-
-    function ColorPickerComponent_div_13_ng_template_3_Template(rf, ctx) {
-      if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementContainerStart"](0, 38);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ColorPickerComponent_div_13_ng_template_3_ng_container_1_Template, 14, 7, "ng-container", 39);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ColorPickerComponent_div_13_ng_template_3_ng_container_2_Template, 14, 7, "ng-container", 39);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](3, ColorPickerComponent_div_13_ng_template_3_ng_container_3_Template, 6, 2, "ng-container", 40);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementContainerEnd"]();
-      }
-
-      if (rf & 2) {
-        var ctx_r30 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngSwitch", ctx_r30.format);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngSwitchCase", ctx_r30.colorFormat.hsla);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngSwitchCase", ctx_r30.colorFormat.rgba);
-      }
-    }
-
-    function ColorPickerComponent_div_13_div_5_Template(rf, ctx) {
-      if (rf & 1) {
-        var _r73 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 44);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "span", 45);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ColorPickerComponent_div_13_div_5_Template_span_click_1_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r73);
-
-          var ctx_r72 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
-
-          return ctx_r72.onFormatToggle(1);
-        });
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "span", 45);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ColorPickerComponent_div_13_div_5_Template_span_click_2_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r73);
-
-          var ctx_r74 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
-
-          return ctx_r74.onFormatToggle(0 - 1);
-        });
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-      }
-    }
-
-    function ColorPickerComponent_div_13_Template(rf, ctx) {
-      if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 28);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 29);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ColorPickerComponent_div_13_ng_container_2_Template, 6, 3, "ng-container", 30);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](3, ColorPickerComponent_div_13_ng_template_3_Template, 4, 3, "ng-template", null, 31, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplateRefExtractor"]);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](5, ColorPickerComponent_div_13_div_5_Template, 3, 0, "div", 32);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-      }
-
-      if (rf & 2) {
-        var _r29 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵreference"](4);
-
-        var ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r7.cpMode == ctx_r7.colorModeInternal.grayscale)("ngIfElse", _r29);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r7.cpMode == ctx_r7.colorModeInternal.color);
-      }
-    }
-
-    function ColorPickerComponent_ng_container_14_div_3_Template(rf, ctx) {
-      if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 50);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-      }
-
-      if (rf & 2) {
-        var ctx_r75 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](ctx_r75.cpPresetLabel);
-      }
-    }
-
-    function ColorPickerComponent_ng_container_14_div_4_div_1_button_2_Template(rf, ctx) {
-      if (rf & 1) {
-        var _r83 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "button", 57);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ColorPickerComponent_ng_container_14_div_4_div_1_button_2_Template_button_click_0_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r83);
-
-          var color_r79 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]().$implicit;
-
-          var ctx_r81 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
-
-          return ctx_r81.onRemovePresetColor(color_r79);
-        });
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnamespaceSVG"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "svg", 20);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](2, "path", 58);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](3, "path", 22);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-      }
-
-      if (rf & 2) {
-        var ctx_r80 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](4);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("title", ctx_r80.cpRemoveColorButtonText);
-      }
-    }
-
-    function ColorPickerComponent_ng_container_14_div_4_div_1_Template(rf, ctx) {
-      if (rf & 1) {
-        var _r85 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 54);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ColorPickerComponent_ng_container_14_div_4_div_1_Template_div_click_0_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r85);
-
-          var color_r79 = ctx.$implicit;
-
-          var ctx_r84 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
-
-          return ctx_r84.setColorFromString(color_r79);
-        });
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 55);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ColorPickerComponent_ng_container_14_div_4_div_1_button_2_Template, 4, 1, "button", 56);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-      }
-
-      if (rf & 2) {
-        var color_r79 = ctx.$implicit;
-
-        var ctx_r77 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("title", color_r79);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](3, _c1, color_r79 || ""));
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r77.cpAddColorButton);
-      }
-    }
-
-    function ColorPickerComponent_ng_container_14_div_4_div_2_Template(rf, ctx) {
-      if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "div", 59);
-      }
-    }
-
-    function ColorPickerComponent_ng_container_14_div_4_Template(rf, ctx) {
-      if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 51);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ColorPickerComponent_ng_container_14_div_4_div_1_Template, 3, 5, "div", 52);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ColorPickerComponent_ng_container_14_div_4_div_2_Template, 1, 0, "div", 53);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-      }
-
-      if (rf & 2) {
-        var ctx_r76 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", ctx_r76.cpPresetColors);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", ctx_r76.fill(50));
-      }
-    }
-
-    function ColorPickerComponent_ng_container_14_Template(rf, ctx) {
-      if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementContainerStart"](0);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](1, "div", 46);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 47);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](3, ColorPickerComponent_ng_container_14_div_3_Template, 2, 1, "div", 48);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](4, ColorPickerComponent_ng_container_14_div_4_Template, 3, 2, "div", 49);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementContainerEnd"]();
-      }
-
-      if (rf & 2) {
-        var ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r8.cpPresetLabel);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r8.cpPresetColors == null ? null : ctx_r8.cpPresetColors.length);
-      }
-    }
-
-    function ColorPickerComponent_div_15_button_1_Template(rf, ctx) {
-      if (rf & 1) {
-        var _r90 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "button", 62);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ColorPickerComponent_div_15_button_1_Template_button_click_0_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r90);
-
-          var ctx_r89 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
-
-          return ctx_r89.onCancel($event);
-        });
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-      }
-
-      if (rf & 2) {
-        var ctx_r87 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](ctx_r87.cpCancelButtonText);
-      }
-    }
-
-    function ColorPickerComponent_div_15_button_2_Template(rf, ctx) {
-      if (rf & 1) {
-        var _r92 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "button", 62);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ColorPickerComponent_div_15_button_2_Template_button_click_0_listener($event) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r92);
-
-          var ctx_r91 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
-
-          return ctx_r91.onAccept($event);
-        });
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-      }
-
-      if (rf & 2) {
-        var ctx_r88 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](ctx_r88.cpOKButtonText);
-      }
-    }
-
-    function ColorPickerComponent_div_15_Template(rf, ctx) {
-      if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 60);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ColorPickerComponent_div_15_button_1_Template, 2, 1, "button", 61);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ColorPickerComponent_div_15_button_2_Template, 2, 1, "button", 61);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-      }
-
-      if (rf & 2) {
-        var ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r9.cpCancelButton);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r9.cpOKButton);
-      }
-    }
-
-    var _c7 = function _c7(a0, a1, a2, a3, a4, a5) {
-      return {
-        visibility: a0,
-        "top.px": a1,
-        "left.px": a2,
-        position: a3,
-        width: a4,
-        height: a5
-      };
-    };
 
     var ColorFormat;
 
@@ -1738,79 +694,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       return cWhite > cBlack;
     }
 
-    var SliderPosition = function SliderPosition(h, s, v, a) {
-      _classCallCheck(this, SliderPosition);
-
-      this.h = h;
-      this.s = s;
-      this.v = v;
-      this.a = a;
-    };
-
-    var SliderDimension = function SliderDimension(h, s, v, a) {
-      _classCallCheck(this, SliderDimension);
-
-      this.h = h;
-      this.s = s;
-      this.v = v;
-      this.a = a;
-    };
-
-    var Position;
-
-    (function (Position) {
-      Position["fixed"] = "fixed";
-      Position["relative"] = "relative";
-      Position["static"] = "static";
-      Position["absolute"] = "absolute";
-    })(Position || (Position = {}));
-
-    var ColorModeInternal;
-
-    (function (ColorModeInternal) {
-      ColorModeInternal[ColorModeInternal["color"] = 0] = "color";
-      ColorModeInternal[ColorModeInternal["grayscale"] = 1] = "grayscale";
-      ColorModeInternal[ColorModeInternal["presets"] = 2] = "presets";
-    })(ColorModeInternal || (ColorModeInternal = {}));
-
-    function parseColorMode(mode) {
-      switch (mode.toString().toUpperCase()) {
-        case '1':
-        case 'C':
-        case 'COLOR':
-          return ColorModeInternal.color;
-
-        case '2':
-        case 'G':
-        case 'GRAYSCALE':
-          return ColorModeInternal.grayscale;
-
-        case '3':
-        case 'P':
-        case 'PRESETS':
-          return ColorModeInternal.presets;
-
-        default:
-          return ColorModeInternal.color;
-      }
-    }
-
-    function sizeToString(val) {
-      var strVal = ((val || 'auto') + '').trim().toLowerCase();
-
-      if (strVal.match(/^\d+[a-z%]+$/) || strVal == 'auto') {
-        return strVal;
-      }
-
-      var num = parseInt(strVal, 10);
-
-      if (!Number.isNaN(num)) {
-        return "".concat(num, "px");
-      }
-
-      return 'auto';
-    }
-
     var ColorPickerService =
     /*#__PURE__*/
     function () {
@@ -1840,14 +723,1051 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       return new (t || ColorPickerService)();
     };
 
-    ColorPickerService.ɵprov = Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"])({
-      factory: function ColorPickerService_Factory() {
-        return new ColorPickerService();
-      },
+    ColorPickerService.ɵprov = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"])({
       token: ColorPickerService,
-      providedIn: "root"
+      factory: ColorPickerService.ɵfac,
+      providedIn: 'root'
     });
-    ColorPickerService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [])], ColorPickerService);
+    /*@__PURE__*/
+
+    (function () {
+      Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"])(ColorPickerService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+        args: [{
+          providedIn: 'root'
+        }]
+      }], function () {
+        return [];
+      }, null);
+    })();
+
+    var SliderDirective =
+    /*#__PURE__*/
+    function () {
+      function SliderDirective(elRef) {
+        _classCallCheck(this, SliderDirective);
+
+        this.elRef = elRef;
+        this.isMoving = false;
+        this.dragEnd = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.dragStart = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.newValue = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+      }
+
+      _createClass(SliderDirective, [{
+        key: "onStart",
+        value: function onStart(event) {
+          event.stopPropagation();
+          event.preventDefault();
+          this.setCursor(event);
+          this.isMoving = true;
+          this.dragStart.emit();
+        }
+      }, {
+        key: "onMove",
+        value: function onMove(event) {
+          if (this.isMoving) {
+            event.stopPropagation();
+            event.preventDefault();
+            this.setCursor(event);
+          }
+        }
+      }, {
+        key: "onStop",
+        value: function onStop(event) {
+          if (this.isMoving) {
+            event.stopPropagation();
+            event.preventDefault();
+            this.isMoving = false;
+            this.dragEnd.emit();
+          }
+        }
+      }, {
+        key: "getX",
+        value: function getX(event) {
+          var position = this.elRef.nativeElement.getBoundingClientRect();
+          var pageX = 'pageX' in event ? event.pageX : event.touches[0].pageX;
+          return pageX - position.left - window.pageXOffset;
+        }
+      }, {
+        key: "getY",
+        value: function getY(event) {
+          var position = this.elRef.nativeElement.getBoundingClientRect();
+          var pageY = 'pageX' in event ? event.pageY : event.touches[0].pageY;
+          return pageY - position.top - window.pageYOffset;
+        }
+      }, {
+        key: "setCursor",
+        value: function setCursor(event) {
+          var width = this.elRef.nativeElement.offsetWidth;
+          var height = this.elRef.nativeElement.offsetHeight;
+          var x = Math.max(0, Math.min(this.getX(event), width));
+          var y = Math.max(0, Math.min(this.getY(event), height));
+
+          if (this.rgX != undefined && this.rgY != undefined) {
+            this.newValue.emit({
+              s: x / width,
+              v: 1 - y / height,
+              rgX: this.rgX,
+              rgY: this.rgY
+            });
+          } else if (this.rgX == undefined && this.rgY != undefined) {
+            this.newValue.emit({
+              v: y / height,
+              rgY: this.rgY
+            });
+          } else if (this.rgX != undefined && this.rgY == undefined) {
+            this.newValue.emit({
+              v: x / width,
+              rgX: this.rgX
+            });
+          }
+        }
+      }]);
+
+      return SliderDirective;
+    }();
+
+    SliderDirective.ɵfac = function SliderDirective_Factory(t) {
+      return new (t || SliderDirective)(Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"])(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"]));
+    };
+
+    SliderDirective.ɵdir = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineDirective"])({
+      type: SliderDirective,
+      selectors: [["", "cpSlider", ""]],
+      hostBindings: function SliderDirective_HostBindings(rf, ctx) {
+        if (rf & 1) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("mousedown", function SliderDirective_mousedown_HostBindingHandler($event) {
+            return ctx.onStart($event);
+          })("touchstart", function SliderDirective_touchstart_HostBindingHandler($event) {
+            return ctx.onStart($event);
+          })("mousemove", function SliderDirective_mousemove_HostBindingHandler($event) {
+            return ctx.onMove($event);
+          }, false, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresolveDocument"])("touchmove", function SliderDirective_touchmove_HostBindingHandler($event) {
+            return ctx.onMove($event);
+          }, false, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresolveDocument"])("mouseup", function SliderDirective_mouseup_HostBindingHandler($event) {
+            return ctx.onStop($event);
+          }, false, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresolveDocument"])("touchend", function SliderDirective_touchend_HostBindingHandler($event) {
+            return ctx.onStop($event);
+          }, false, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresolveDocument"]);
+        }
+      },
+      inputs: {
+        rgX: "rgX",
+        rgY: "rgY",
+        slider: "slider"
+      },
+      outputs: {
+        dragEnd: "dragEnd",
+        dragStart: "dragStart",
+        newValue: "newValue"
+      }
+    });
+    /*@__PURE__*/
+
+    (function () {
+      Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"])(SliderDirective, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"],
+        args: [{
+          selector: '[cpSlider]'
+        }]
+      }], function () {
+        return [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"]
+        }];
+      }, {
+        rgX: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }],
+        rgY: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }],
+        slider: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }],
+        dragEnd: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
+        }],
+        dragStart: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
+        }],
+        newValue: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
+        }],
+        onStart: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"],
+          args: ['mousedown', ['$event']]
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"],
+          args: ['touchstart', ['$event']]
+        }],
+        onMove: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"],
+          args: ['document:mousemove', ['$event']]
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"],
+          args: ['document:touchmove', ['$event']]
+        }],
+        onStop: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"],
+          args: ['document:mouseup', ['$event']]
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"],
+          args: ['document:touchend', ['$event']]
+        }]
+      });
+    })();
+
+    var TextDirective =
+    /*#__PURE__*/
+    function () {
+      function TextDirective() {
+        _classCallCheck(this, TextDirective);
+
+        this.newValue = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+      }
+
+      _createClass(TextDirective, [{
+        key: "inputChange",
+        value: function inputChange(event) {
+          var value = ((event && event.target && event.target['value'] || '') + '').trim();
+
+          if (this.rg == undefined) {
+            this.newValue.emit(value);
+          } else {
+            var numeric = parseFloat(value);
+            this.newValue.emit({
+              v: numeric,
+              rg: this.rg
+            });
+          }
+        }
+      }]);
+
+      return TextDirective;
+    }();
+
+    TextDirective.ɵfac = function TextDirective_Factory(t) {
+      return new (t || TextDirective)();
+    };
+
+    TextDirective.ɵdir = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineDirective"])({
+      type: TextDirective,
+      selectors: [["", "cpText", ""]],
+      hostBindings: function TextDirective_HostBindings(rf, ctx) {
+        if (rf & 1) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("input", function TextDirective_input_HostBindingHandler($event) {
+            return ctx.inputChange($event);
+          })("change", function TextDirective_change_HostBindingHandler($event) {
+            return ctx.inputChange($event);
+          });
+        }
+      },
+      inputs: {
+        rg: "rg",
+        text: "text"
+      },
+      outputs: {
+        newValue: "newValue"
+      }
+    });
+    /*@__PURE__*/
+
+    (function () {
+      Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"])(TextDirective, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"],
+        args: [{
+          selector: '[cpText]'
+        }]
+      }], null, {
+        rg: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }],
+        text: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }],
+        newValue: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
+        }],
+        inputChange: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"],
+          args: ['input', ['$event']]
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"],
+          args: ['change', ['$event']]
+        }]
+      });
+    })();
+
+    var _c0 = ["dialogPopup"];
+
+    function ColorPickerComponent_div_2_Template(rf, ctx) {
+      if (rf & 1) {
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"])(0, "div", 16);
+      }
+
+      if (rf & 2) {
+        var ctx_r1 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngClass", "color-picker__arrow--" + ctx_r1.cpPosition);
+      }
+    }
+
+    var _c1 = function _c1(a0) {
+      return {
+        backgroundColor: a0
+      };
+    };
+
+    var _c2 = function _c2(a0) {
+      return {
+        "color-picker__cursor--light": a0
+      };
+    };
+
+    var _c3 = function _c3(a0, a1) {
+      return {
+        top: a0,
+        left: a1
+      };
+    };
+
+    function ColorPickerComponent_div_3_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r11 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"])();
+
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "div", 17);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("newValue", function ColorPickerComponent_div_3_Template_div_newValue_0_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r11);
+          var ctx_r10 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
+          return ctx_r10.onColorChange($event);
+        })("dragStart", function ColorPickerComponent_div_3_Template_div_dragStart_0_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r11);
+          var ctx_r12 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
+          return ctx_r12.onDragStart("saturation-lightness");
+        })("dragEnd", function ColorPickerComponent_div_3_Template_div_dragEnd_0_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r11);
+          var ctx_r13 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
+          return ctx_r13.onDragEnd("saturation-lightness");
+        });
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"])(1, "div", 18);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+      }
+
+      if (rf & 2) {
+        var ctx_r2 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("rgX", 1)("rgY", 1)("ngStyle", Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"])(5, _c1, ctx_r2.hueSliderColor || ""));
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngClass", Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"])(7, _c2, ctx_r2.svSliderLight))("ngStyle", Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction2"])(9, _c3, ((ctx_r2.slider == null ? null : ctx_r2.slider.v) || 0) * 100 + "%", ((ctx_r2.slider == null ? null : ctx_r2.slider.s) || 0) * 100 + "%"));
+      }
+    }
+
+    var _c4 = function _c4(a0) {
+      return {
+        "color-picker__add-selected--light": a0
+      };
+    };
+
+    function ColorPickerComponent_button_8_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r15 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"])();
+
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "button", 19);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("click", function ColorPickerComponent_button_8_Template_button_click_0_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r15);
+          var ctx_r14 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
+          return ctx_r14.onAddPresetColor(ctx_r14.selectedColor);
+        });
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnamespaceSVG"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(1, "svg", 20);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"])(2, "path", 21);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"])(3, "path", 22);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+      }
+
+      if (rf & 2) {
+        var ctx_r3 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("title", ctx_r3.cpAddColorButtonText)("ngClass", Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"])(2, _c4, ctx_r3.alphaSliderLight));
+      }
+    }
+
+    var _c5 = function _c5(a0) {
+      return {
+        left: a0
+      };
+    };
+
+    function ColorPickerComponent_div_10_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r17 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"])();
+
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "div", 23);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("newValue", function ColorPickerComponent_div_10_Template_div_newValue_0_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r17);
+          var ctx_r16 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
+          return ctx_r16.onHueChange($event);
+        })("dragStart", function ColorPickerComponent_div_10_Template_div_dragStart_0_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r17);
+          var ctx_r18 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
+          return ctx_r18.onDragStart("hue");
+        })("dragEnd", function ColorPickerComponent_div_10_Template_div_dragEnd_0_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r17);
+          var ctx_r19 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
+          return ctx_r19.onDragEnd("hue");
+        });
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"])(1, "div", 24);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+      }
+
+      if (rf & 2) {
+        var ctx_r4 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("rgX", 1);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngClass", Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"])(3, _c2, ctx_r4.hueSliderLight))("ngStyle", Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"])(5, _c5, ((ctx_r4.slider == null ? null : ctx_r4.slider.h) || 0) * 100 + "%"));
+      }
+    }
+
+    function ColorPickerComponent_div_11_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r21 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"])();
+
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "div", 25);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("newValue", function ColorPickerComponent_div_11_Template_div_newValue_0_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r21);
+          var ctx_r20 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
+          return ctx_r20.onValueChange($event);
+        })("dragStart", function ColorPickerComponent_div_11_Template_div_dragStart_0_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r21);
+          var ctx_r22 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
+          return ctx_r22.onDragStart("value");
+        })("dragEnd", function ColorPickerComponent_div_11_Template_div_dragEnd_0_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r21);
+          var ctx_r23 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
+          return ctx_r23.onDragEnd("value");
+        });
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"])(1, "div", 24);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+      }
+
+      if (rf & 2) {
+        var ctx_r5 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("rgX", 1);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngClass", Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"])(3, _c2, ctx_r5.valueSliderLight))("ngStyle", Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"])(5, _c5, (1 - ((ctx_r5.slider == null ? null : ctx_r5.slider.v) || 0)) * 100 + "%"));
+      }
+    }
+
+    var _c6 = function _c6(a0) {
+      return {
+        backgroundImage: a0
+      };
+    };
+
+    function ColorPickerComponent_div_12_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r25 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"])();
+
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "div", 26);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("newValue", function ColorPickerComponent_div_12_Template_div_newValue_0_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r25);
+          var ctx_r24 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
+          return ctx_r24.onAlphaChange($event);
+        })("dragStart", function ColorPickerComponent_div_12_Template_div_dragStart_0_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r25);
+          var ctx_r26 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
+          return ctx_r26.onDragStart("alpha");
+        })("dragEnd", function ColorPickerComponent_div_12_Template_div_dragEnd_0_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r25);
+          var ctx_r27 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
+          return ctx_r27.onDragEnd("alpha");
+        });
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(1, "div", 27);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"])(2, "div", 24);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+      }
+
+      if (rf & 2) {
+        var ctx_r6 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("rgX", 1);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngStyle", Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"])(4, _c6, ctx_r6.alphaSliderColor || ""));
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngClass", Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"])(6, _c2, ctx_r6.alphaSliderLight))("ngStyle", Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"])(8, _c5, ((ctx_r6.slider == null ? null : ctx_r6.slider.a) || 0) * 100 + "%"));
+      }
+    }
+
+    function ColorPickerComponent_div_13_ng_container_2_div_5_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r34 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"])();
+
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "div", 33);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(1, "input", 37);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("keyup.enter", function ColorPickerComponent_div_13_ng_container_2_div_5_Template_input_keyup_enter_1_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r34);
+          var ctx_r33 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(3);
+          return ctx_r33.onAccept($event);
+        })("newValue", function ColorPickerComponent_div_13_ng_container_2_div_5_Template_input_newValue_1_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r34);
+          var ctx_r35 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(3);
+          return ctx_r35.onAlphaInput($event);
+        });
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(2, "span", 35);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"])(3, "A");
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+      }
+
+      if (rf & 2) {
+        var ctx_r32 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(3);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("rg", 1)("value", ctx_r32.hslaText == null ? null : ctx_r32.hslaText.a);
+      }
+    }
+
+    function ColorPickerComponent_div_13_ng_container_2_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r37 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"])();
+
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"])(0);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(1, "div", 33);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(2, "input", 34);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("keyup.enter", function ColorPickerComponent_div_13_ng_container_2_Template_input_keyup_enter_2_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r37);
+          var ctx_r36 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(2);
+          return ctx_r36.onAccept($event);
+        })("newValue", function ColorPickerComponent_div_13_ng_container_2_Template_input_newValue_2_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r37);
+          var ctx_r38 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(2);
+          return ctx_r38.onValueInput($event);
+        });
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(3, "span", 35);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"])(4, "V");
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(5, ColorPickerComponent_div_13_ng_container_2_div_5_Template, 4, 2, "div", 36);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"])();
+      }
+
+      if (rf & 2) {
+        var ctx_r28 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(2);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(2);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("rg", 100)("value", ctx_r28.hslaText == null ? null : ctx_r28.hslaText.l);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(3);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx_r28.cpAlphaChannel != ctx_r28.alphaChannel.disabled);
+      }
+    }
+
+    function ColorPickerComponent_div_13_ng_template_3_ng_container_1_div_13_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r44 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"])();
+
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "div", 33);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(1, "input", 37);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("keyup.enter", function ColorPickerComponent_div_13_ng_template_3_ng_container_1_div_13_Template_input_keyup_enter_1_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r44);
+          var ctx_r43 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(4);
+          return ctx_r43.onAccept($event);
+        })("newValue", function ColorPickerComponent_div_13_ng_template_3_ng_container_1_div_13_Template_input_newValue_1_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r44);
+          var ctx_r45 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(4);
+          return ctx_r45.onAlphaInput($event);
+        });
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(2, "span", 35);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"])(3, "A");
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+      }
+
+      if (rf & 2) {
+        var ctx_r42 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(4);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("rg", 1)("value", ctx_r42.hslaText == null ? null : ctx_r42.hslaText.a);
+      }
+    }
+
+    function ColorPickerComponent_div_13_ng_template_3_ng_container_1_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r47 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"])();
+
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"])(0);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(1, "div", 33);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(2, "input", 41);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("keyup.enter", function ColorPickerComponent_div_13_ng_template_3_ng_container_1_Template_input_keyup_enter_2_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r47);
+          var ctx_r46 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(3);
+          return ctx_r46.onAccept($event);
+        })("newValue", function ColorPickerComponent_div_13_ng_template_3_ng_container_1_Template_input_newValue_2_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r47);
+          var ctx_r48 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(3);
+          return ctx_r48.onHueInput($event);
+        });
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(3, "span", 35);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"])(4, "H");
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(5, "div", 33);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(6, "input", 34);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("keyup.enter", function ColorPickerComponent_div_13_ng_template_3_ng_container_1_Template_input_keyup_enter_6_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r47);
+          var ctx_r49 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(3);
+          return ctx_r49.onAccept($event);
+        })("newValue", function ColorPickerComponent_div_13_ng_template_3_ng_container_1_Template_input_newValue_6_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r47);
+          var ctx_r50 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(3);
+          return ctx_r50.onSaturationInput($event);
+        });
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(7, "span", 35);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"])(8, "S");
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(9, "div", 33);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(10, "input", 34);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("keyup.enter", function ColorPickerComponent_div_13_ng_template_3_ng_container_1_Template_input_keyup_enter_10_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r47);
+          var ctx_r51 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(3);
+          return ctx_r51.onAccept($event);
+        })("newValue", function ColorPickerComponent_div_13_ng_template_3_ng_container_1_Template_input_newValue_10_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r47);
+          var ctx_r52 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(3);
+          return ctx_r52.onLightnessInput($event);
+        });
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(11, "span", 35);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"])(12, "L");
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(13, ColorPickerComponent_div_13_ng_template_3_ng_container_1_div_13_Template, 4, 2, "div", 36);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"])();
+      }
+
+      if (rf & 2) {
+        var ctx_r39 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(3);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(2);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("rg", 360)("value", ctx_r39.hslaText == null ? null : ctx_r39.hslaText.h);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(4);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("rg", 100)("value", ctx_r39.hslaText == null ? null : ctx_r39.hslaText.s);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(4);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("rg", 100)("value", ctx_r39.hslaText == null ? null : ctx_r39.hslaText.l);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(3);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx_r39.cpAlphaChannel != ctx_r39.alphaChannel.disabled);
+      }
+    }
+
+    function ColorPickerComponent_div_13_ng_template_3_ng_container_2_div_13_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r55 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"])();
+
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "div", 33);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(1, "input", 37);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("keyup.enter", function ColorPickerComponent_div_13_ng_template_3_ng_container_2_div_13_Template_input_keyup_enter_1_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r55);
+          var ctx_r54 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(4);
+          return ctx_r54.onAccept($event);
+        })("newValue", function ColorPickerComponent_div_13_ng_template_3_ng_container_2_div_13_Template_input_newValue_1_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r55);
+          var ctx_r56 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(4);
+          return ctx_r56.onAlphaInput($event);
+        });
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(2, "span", 35);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"])(3, "A");
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+      }
+
+      if (rf & 2) {
+        var ctx_r53 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(4);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("rg", 1)("value", ctx_r53.hslaText == null ? null : ctx_r53.hslaText.a);
+      }
+    }
+
+    function ColorPickerComponent_div_13_ng_template_3_ng_container_2_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r58 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"])();
+
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"])(0);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(1, "div", 33);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(2, "input", 42);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("keyup.enter", function ColorPickerComponent_div_13_ng_template_3_ng_container_2_Template_input_keyup_enter_2_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r58);
+          var ctx_r57 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(3);
+          return ctx_r57.onAccept($event);
+        })("newValue", function ColorPickerComponent_div_13_ng_template_3_ng_container_2_Template_input_newValue_2_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r58);
+          var ctx_r59 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(3);
+          return ctx_r59.onRedInput($event);
+        });
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(3, "span", 35);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"])(4, "R");
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(5, "div", 33);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(6, "input", 42);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("keyup.enter", function ColorPickerComponent_div_13_ng_template_3_ng_container_2_Template_input_keyup_enter_6_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r58);
+          var ctx_r60 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(3);
+          return ctx_r60.onAccept($event);
+        })("newValue", function ColorPickerComponent_div_13_ng_template_3_ng_container_2_Template_input_newValue_6_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r58);
+          var ctx_r61 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(3);
+          return ctx_r61.onGreenInput($event);
+        });
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(7, "span", 35);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"])(8, "G");
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(9, "div", 33);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(10, "input", 42);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("keyup.enter", function ColorPickerComponent_div_13_ng_template_3_ng_container_2_Template_input_keyup_enter_10_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r58);
+          var ctx_r62 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(3);
+          return ctx_r62.onAccept($event);
+        })("newValue", function ColorPickerComponent_div_13_ng_template_3_ng_container_2_Template_input_newValue_10_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r58);
+          var ctx_r63 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(3);
+          return ctx_r63.onBlueInput($event);
+        });
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(11, "span", 35);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"])(12, "B");
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(13, ColorPickerComponent_div_13_ng_template_3_ng_container_2_div_13_Template, 4, 2, "div", 36);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"])();
+      }
+
+      if (rf & 2) {
+        var ctx_r40 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(3);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(2);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("rg", 255)("value", ctx_r40.rgbaText == null ? null : ctx_r40.rgbaText.r);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(4);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("rg", 255)("value", ctx_r40.rgbaText == null ? null : ctx_r40.rgbaText.g);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(4);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("rg", 255)("value", ctx_r40.rgbaText == null ? null : ctx_r40.rgbaText.b);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(3);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx_r40.cpAlphaChannel != ctx_r40.alphaChannel.disabled);
+      }
+    }
+
+    function ColorPickerComponent_div_13_ng_template_3_ng_container_3_div_5_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r66 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"])();
+
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "div", 33);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(1, "input", 37);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("keyup.enter", function ColorPickerComponent_div_13_ng_template_3_ng_container_3_div_5_Template_input_keyup_enter_1_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r66);
+          var ctx_r65 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(4);
+          return ctx_r65.onAccept($event);
+        })("newValue", function ColorPickerComponent_div_13_ng_template_3_ng_container_3_div_5_Template_input_newValue_1_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r66);
+          var ctx_r67 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(4);
+          return ctx_r67.onAlphaInput($event);
+        });
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(2, "span", 35);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"])(3, "A");
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+      }
+
+      if (rf & 2) {
+        var ctx_r64 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(4);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("rg", 1)("value", ctx_r64.hexAlpha);
+      }
+    }
+
+    function ColorPickerComponent_div_13_ng_template_3_ng_container_3_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r69 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"])();
+
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"])(0);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(1, "div", 33);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(2, "input", 43);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("blur", function ColorPickerComponent_div_13_ng_template_3_ng_container_3_Template_input_blur_2_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r69);
+          var ctx_r68 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(3);
+          return ctx_r68.onHexInput(null);
+        })("keyup.enter", function ColorPickerComponent_div_13_ng_template_3_ng_container_3_Template_input_keyup_enter_2_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r69);
+          var ctx_r70 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(3);
+          return ctx_r70.onAccept($event);
+        })("newValue", function ColorPickerComponent_div_13_ng_template_3_ng_container_3_Template_input_newValue_2_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r69);
+          var ctx_r71 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(3);
+          return ctx_r71.onHexInput($event);
+        });
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(3, "span", 35);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"])(4, "Hex");
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(5, ColorPickerComponent_div_13_ng_template_3_ng_container_3_div_5_Template, 4, 2, "div", 36);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"])();
+      }
+
+      if (rf & 2) {
+        var ctx_r41 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(3);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(2);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("value", ctx_r41.hexText);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(3);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx_r41.cpAlphaChannel == ctx_r41.alphaChannel.forced);
+      }
+    }
+
+    function ColorPickerComponent_div_13_ng_template_3_Template(rf, ctx) {
+      if (rf & 1) {
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"])(0, 38);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(1, ColorPickerComponent_div_13_ng_template_3_ng_container_1_Template, 14, 7, "ng-container", 39);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(2, ColorPickerComponent_div_13_ng_template_3_ng_container_2_Template, 14, 7, "ng-container", 39);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(3, ColorPickerComponent_div_13_ng_template_3_ng_container_3_Template, 6, 2, "ng-container", 40);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"])();
+      }
+
+      if (rf & 2) {
+        var ctx_r30 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(2);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngSwitch", ctx_r30.format);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngSwitchCase", ctx_r30.colorFormat.hsla);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngSwitchCase", ctx_r30.colorFormat.rgba);
+      }
+    }
+
+    function ColorPickerComponent_div_13_div_5_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r73 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"])();
+
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "div", 44);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(1, "span", 45);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("click", function ColorPickerComponent_div_13_div_5_Template_span_click_1_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r73);
+          var ctx_r72 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(2);
+          return ctx_r72.onFormatToggle(1);
+        });
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(2, "span", 45);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("click", function ColorPickerComponent_div_13_div_5_Template_span_click_2_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r73);
+          var ctx_r74 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(2);
+          return ctx_r74.onFormatToggle(0 - 1);
+        });
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+      }
+    }
+
+    function ColorPickerComponent_div_13_Template(rf, ctx) {
+      if (rf & 1) {
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "div", 28);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(1, "div", 29);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(2, ColorPickerComponent_div_13_ng_container_2_Template, 6, 3, "ng-container", 30);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(3, ColorPickerComponent_div_13_ng_template_3_Template, 4, 3, "ng-template", null, 31, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplateRefExtractor"]);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(5, ColorPickerComponent_div_13_div_5_Template, 3, 0, "div", 32);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+      }
+
+      if (rf & 2) {
+        var _r29 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"])(4);
+
+        var ctx_r7 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(2);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx_r7.cpMode == ctx_r7.colorModeInternal.grayscale)("ngIfElse", _r29);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(3);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx_r7.cpMode == ctx_r7.colorModeInternal.color);
+      }
+    }
+
+    function ColorPickerComponent_ng_container_14_div_3_Template(rf, ctx) {
+      if (rf & 1) {
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "div", 50);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"])(1);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+      }
+
+      if (rf & 2) {
+        var ctx_r75 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(2);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"])(ctx_r75.cpPresetLabel);
+      }
+    }
+
+    function ColorPickerComponent_ng_container_14_div_4_div_1_button_2_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r83 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"])();
+
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "button", 57);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("click", function ColorPickerComponent_ng_container_14_div_4_div_1_button_2_Template_button_click_0_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r83);
+          var color_r79 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])().$implicit;
+          var ctx_r81 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(3);
+          return ctx_r81.onRemovePresetColor(color_r79);
+        });
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnamespaceSVG"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(1, "svg", 20);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"])(2, "path", 58);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"])(3, "path", 22);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+      }
+
+      if (rf & 2) {
+        var ctx_r80 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(4);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("title", ctx_r80.cpRemoveColorButtonText);
+      }
+    }
+
+    function ColorPickerComponent_ng_container_14_div_4_div_1_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r85 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"])();
+
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "div", 54);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("click", function ColorPickerComponent_ng_container_14_div_4_div_1_Template_div_click_0_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r85);
+          var color_r79 = ctx.$implicit;
+          var ctx_r84 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(3);
+          return ctx_r84.setColorFromString(color_r79);
+        });
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(1, "div", 55);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(2, ColorPickerComponent_ng_container_14_div_4_div_1_button_2_Template, 4, 1, "button", 56);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+      }
+
+      if (rf & 2) {
+        var color_r79 = ctx.$implicit;
+        var ctx_r77 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(3);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("title", color_r79);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngStyle", Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"])(3, _c1, color_r79 || ""));
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx_r77.cpAddColorButton);
+      }
+    }
+
+    function ColorPickerComponent_ng_container_14_div_4_div_2_Template(rf, ctx) {
+      if (rf & 1) {
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"])(0, "div", 59);
+      }
+    }
+
+    function ColorPickerComponent_ng_container_14_div_4_Template(rf, ctx) {
+      if (rf & 1) {
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "div", 51);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(1, ColorPickerComponent_ng_container_14_div_4_div_1_Template, 3, 5, "div", 52);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(2, ColorPickerComponent_ng_container_14_div_4_div_2_Template, 1, 0, "div", 53);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+      }
+
+      if (rf & 2) {
+        var ctx_r76 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(2);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngForOf", ctx_r76.cpPresetColors);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngForOf", ctx_r76.fill(50));
+      }
+    }
+
+    function ColorPickerComponent_ng_container_14_Template(rf, ctx) {
+      if (rf & 1) {
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"])(0);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"])(1, "div", 46);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(2, "div", 47);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(3, ColorPickerComponent_ng_container_14_div_3_Template, 2, 1, "div", 48);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(4, ColorPickerComponent_ng_container_14_div_4_Template, 3, 2, "div", 49);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"])();
+      }
+
+      if (rf & 2) {
+        var ctx_r8 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(3);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx_r8.cpPresetLabel);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx_r8.cpPresetColors == null ? null : ctx_r8.cpPresetColors.length);
+      }
+    }
+
+    function ColorPickerComponent_div_15_button_1_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r90 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"])();
+
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "button", 62);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("click", function ColorPickerComponent_div_15_button_1_Template_button_click_0_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r90);
+          var ctx_r89 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(2);
+          return ctx_r89.onCancel($event);
+        });
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"])(1);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+      }
+
+      if (rf & 2) {
+        var ctx_r87 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(2);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"])(ctx_r87.cpCancelButtonText);
+      }
+    }
+
+    function ColorPickerComponent_div_15_button_2_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r92 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"])();
+
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "button", 62);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("click", function ColorPickerComponent_div_15_button_2_Template_button_click_0_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"])(_r92);
+          var ctx_r91 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(2);
+          return ctx_r91.onAccept($event);
+        });
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"])(1);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+      }
+
+      if (rf & 2) {
+        var ctx_r88 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])(2);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"])(ctx_r88.cpOKButtonText);
+      }
+    }
+
+    function ColorPickerComponent_div_15_Template(rf, ctx) {
+      if (rf & 1) {
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "div", 60);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(1, ColorPickerComponent_div_15_button_1_Template, 2, 1, "button", 61);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(2, ColorPickerComponent_div_15_button_2_Template, 2, 1, "button", 61);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+      }
+
+      if (rf & 2) {
+        var ctx_r9 = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"])();
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx_r9.cpCancelButton);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx_r9.cpOKButton);
+      }
+    }
+
+    var _c7 = function _c7(a0, a1, a2, a3, a4, a5) {
+      return {
+        visibility: a0,
+        "top.px": a1,
+        "left.px": a2,
+        position: a3,
+        width: a4,
+        height: a5
+      };
+    };
 
     var ColorPickerComponent =
     /*#__PURE__*/
@@ -1911,7 +1831,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "onFocusChange",
         value: function onFocusChange(event) {
-          var path = new Set(event.composedPath());
+          var path = new Set(composedPath(event));
           var intersect = this.cpIgnoredElements.find(function (el) {
             return path.has(el);
           });
@@ -2581,36 +2501,36 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }();
 
     ColorPickerComponent.ɵfac = function ColorPickerComponent_Factory(t) {
-      return new (t || ColorPickerComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](ColorPickerService));
+      return new (t || ColorPickerComponent)(Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"])(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"]), Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"])(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]), Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"])(ColorPickerService));
     };
 
-    ColorPickerComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
+    ColorPickerComponent.ɵcmp = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"])({
       type: ColorPickerComponent,
       selectors: [["cp-color-picker"]],
       viewQuery: function ColorPickerComponent_Query(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵstaticViewQuery"](_c0, true);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstaticViewQuery"])(_c0, true);
         }
 
         if (rf & 2) {
           var _t;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.dialogElement = _t.first);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"])(_t = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"])()) && (ctx.dialogElement = _t.first);
         }
       },
       hostBindings: function ColorPickerComponent_HostBindings(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("keyup.esc", function ColorPickerComponent_keyup_esc_HostBindingHandler($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("keyup.esc", function ColorPickerComponent_keyup_esc_HostBindingHandler($event) {
             return ctx.onCancel($event);
-          }, false, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵresolveDocument"])("keyup.enter", function ColorPickerComponent_keyup_enter_HostBindingHandler($event) {
+          }, false, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresolveDocument"])("keyup.enter", function ColorPickerComponent_keyup_enter_HostBindingHandler($event) {
             return ctx.onAccept($event);
-          }, false, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵresolveDocument"])("mousedown", function ColorPickerComponent_mousedown_HostBindingHandler($event) {
+          }, false, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresolveDocument"])("mousedown", function ColorPickerComponent_mousedown_HostBindingHandler($event) {
             return ctx.onFocusChange($event);
-          }, false, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵresolveDocument"])("focusin", function ColorPickerComponent_focusin_HostBindingHandler($event) {
+          }, false, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresolveDocument"])("focusin", function ColorPickerComponent_focusin_HostBindingHandler($event) {
             return ctx.onFocusChange($event);
-          }, false, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵresolveDocument"])("resize", function ColorPickerComponent_resize_HostBindingHandler($event) {
+          }, false, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresolveDocument"])("resize", function ColorPickerComponent_resize_HostBindingHandler($event) {
             return ctx.onResize();
-          }, false, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵresolveWindow"]);
+          }, false, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresolveWindow"]);
         }
       },
       decls: 16,
@@ -2618,121 +2538,106 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       consts: [[1, "color-picker", 3, "ngStyle", "click"], ["dialogPopup", ""], ["class", "color-picker__arrow", 3, "ngClass", 4, "ngIf"], ["class", "color-picker__sv", "cpSlider", "", 3, "rgX", "rgY", "ngStyle", "newValue", "dragStart", "dragEnd", 4, "ngIf"], [1, "color-picker__controls"], [1, "color-picker__selected"], [1, "color-picker__selected-color"], [3, "ngStyle"], ["type", "button", "class", "color-picker__add-selected", 3, "title", "ngClass", "click", 4, "ngIf"], [1, "color-picker__hav"], ["class", "color-picker__slider color-picker__slider--hue", "cpSlider", "", 3, "rgX", "newValue", "dragStart", "dragEnd", 4, "ngIf"], ["class", "color-picker__slider color-picker__slider--value", "cpSlider", "", 3, "rgX", "newValue", "dragStart", "dragEnd", 4, "ngIf"], ["class", "color-picker__slider color-picker__slider--alpha", "cpSlider", "", 3, "rgX", "newValue", "dragStart", "dragEnd", 4, "ngIf"], ["class", "color-picker__inputs", 4, "ngIf"], [4, "ngIf"], ["class", "color-picker__buttons", 4, "ngIf"], [1, "color-picker__arrow", 3, "ngClass"], ["cpSlider", "", 1, "color-picker__sv", 3, "rgX", "rgY", "ngStyle", "newValue", "dragStart", "dragEnd"], [1, "color-picker__cursor", "color-picker__cursor--sv", 3, "ngClass", "ngStyle"], ["type", "button", 1, "color-picker__add-selected", 3, "title", "ngClass", "click"], ["xmlns", "http://www.w3.org/2000/svg", "width", "24", "height", "24", "viewBox", "0 0 24 24"], ["d", "M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"], ["d", "M0 0h24v24H0z", "fill", "none"], ["cpSlider", "", 1, "color-picker__slider", "color-picker__slider--hue", 3, "rgX", "newValue", "dragStart", "dragEnd"], [1, "color-picker__cursor", 3, "ngClass", "ngStyle"], ["cpSlider", "", 1, "color-picker__slider", "color-picker__slider--value", 3, "rgX", "newValue", "dragStart", "dragEnd"], ["cpSlider", "", 1, "color-picker__slider", "color-picker__slider--alpha", 3, "rgX", "newValue", "dragStart", "dragEnd"], [1, "color-picker__slider--alpha-bg", 3, "ngStyle"], [1, "color-picker__inputs"], [1, "color-picker__input-fields"], [4, "ngIf", "ngIfElse"], ["formatSwitch", ""], ["class", "color-picker__input-type", 4, "ngIf"], [1, "color-picker__input-field"], ["type", "number", "pattern", "[0-9]*", "min", "0", "max", "100", "cpText", "", 3, "rg", "value", "keyup.enter", "newValue"], [1, "color-picker__input-field-label"], ["class", "color-picker__input-field", 4, "ngIf"], ["type", "number", "pattern", "[0-9]+([\\.,][0-9]{1,2})?", "min", "0", "max", "1", "step", "0.1", "cpText", "", 3, "rg", "value", "keyup.enter", "newValue"], [3, "ngSwitch"], [4, "ngSwitchCase"], [4, "ngSwitchDefault"], ["type", "number", "pattern", "[0-9]*", "min", "0", "max", "360", "cpText", "", 3, "rg", "value", "keyup.enter", "newValue"], ["type", "number", "pattern", "[0-9]*", "min", "0", "max", "255", "cpText", "", 3, "rg", "value", "keyup.enter", "newValue"], ["cpText", "", 3, "value", "blur", "keyup.enter", "newValue"], [1, "color-picker__input-type"], [1, "color-picker__input-type-arrow", 3, "click"], [1, "color-picker__separator"], [1, "color-picker__preset"], ["class", "color-picker__preset-label", 4, "ngIf"], ["class", "color-picker__preset-items", 4, "ngIf"], [1, "color-picker__preset-label"], [1, "color-picker__preset-items"], ["class", "color-picker__preset-item", 3, "title", "click", 4, "ngFor", "ngForOf"], ["class", "color-picker__preset-item", 4, "ngFor", "ngForOf"], [1, "color-picker__preset-item", 3, "title", "click"], [1, "color-picker__preset-item-fill", 3, "ngStyle"], ["type", "button", "class", "color-picker__remove-selected", 3, "title", "click", 4, "ngIf"], ["type", "button", 1, "color-picker__remove-selected", 3, "title", "click"], ["d", "M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"], [1, "color-picker__preset-item"], [1, "color-picker__buttons"], ["type", "button", 3, "click", 4, "ngIf"], ["type", "button", 3, "click"]],
       template: function ColorPickerComponent_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0, 1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ColorPickerComponent_Template_div_click_0_listener($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(0, "div", 0, 1);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("click", function ColorPickerComponent_Template_div_click_0_listener($event) {
             return $event.stopPropagation();
           });
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ColorPickerComponent_div_2_Template, 1, 1, "div", 2);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](3, ColorPickerComponent_div_3_Template, 2, 12, "div", 3);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "div", 4);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "div", 5);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "div", 6);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "div", 7);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](8, ColorPickerComponent_button_8_Template, 4, 4, "button", 8);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "div", 9);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](10, ColorPickerComponent_div_10_Template, 2, 7, "div", 10);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](11, ColorPickerComponent_div_11_Template, 2, 7, "div", 11);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](12, ColorPickerComponent_div_12_Template, 3, 10, "div", 12);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](13, ColorPickerComponent_div_13_Template, 6, 3, "div", 13);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](14, ColorPickerComponent_ng_container_14_Template, 5, 2, "ng-container", 14);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](15, ColorPickerComponent_div_15_Template, 3, 2, "div", 15);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(2, ColorPickerComponent_div_2_Template, 1, 1, "div", 2);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(3, ColorPickerComponent_div_3_Template, 2, 12, "div", 3);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(4, "div", 4);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(5, "div", 5);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(6, "div", 6);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(7, "div", 7);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(8, ColorPickerComponent_button_8_Template, 4, 4, "button", 8);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"])(9, "div", 9);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(10, ColorPickerComponent_div_10_Template, 2, 7, "div", 10);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(11, ColorPickerComponent_div_11_Template, 2, 7, "div", 11);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(12, ColorPickerComponent_div_12_Template, 3, 10, "div", 12);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(13, ColorPickerComponent_div_13_Template, 6, 3, "div", 13);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(14, ColorPickerComponent_ng_container_14_Template, 5, 2, "ng-container", 14);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"])(15, ColorPickerComponent_div_15_Template, 3, 2, "div", 15);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"])();
         }
 
         if (rf & 2) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction6"](11, _c7, ctx.hidden || !ctx.show ? "hidden" : "visible", ctx.top || 0, ctx.left || 0, ctx.position || undefined, ctx.cpWidth || "auto", ctx.cpHeight || "auto"));
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.cpDialogDisplay == ctx.dialogDisplay.popup);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.cpMode == ctx.colorModeInternal.color);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](18, _c1, ctx.selectedColor || ""));
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.cpAddColorButton && !(ctx.cpMaxPresetColors && ((ctx.cpPresetColors == null ? null : ctx.cpPresetColors.length) || 0) >= ctx.cpMaxPresetColors));
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.cpMode == ctx.colorModeInternal.color);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.cpMode == ctx.colorModeInternal.grayscale);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.cpAlphaChannel != ctx.alphaChannel.disabled);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.cpDisableInput && (ctx.cpMode == ctx.colorModeInternal.color || ctx.cpMode == ctx.colorModeInternal.grayscale));
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.cpPresetColors == null ? null : ctx.cpPresetColors.length);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.cpOKButton || ctx.cpCancelButton);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngStyle", Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction6"])(11, _c7, ctx.hidden || !ctx.show ? "hidden" : "visible", ctx.top || 0, ctx.left || 0, ctx.position || undefined, ctx.cpWidth || "auto", ctx.cpHeight || "auto"));
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(2);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx.cpDialogDisplay == ctx.dialogDisplay.popup);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx.cpMode == ctx.colorModeInternal.color);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(4);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngStyle", Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"])(18, _c1, ctx.selectedColor || ""));
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx.cpAddColorButton && !(ctx.cpMaxPresetColors && ((ctx.cpPresetColors == null ? null : ctx.cpPresetColors.length) || 0) >= ctx.cpMaxPresetColors));
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(2);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx.cpMode == ctx.colorModeInternal.color);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx.cpMode == ctx.colorModeInternal.grayscale);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx.cpAlphaChannel != ctx.alphaChannel.disabled);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", !ctx.cpDisableInput && (ctx.cpMode == ctx.colorModeInternal.color || ctx.cpMode == ctx.colorModeInternal.grayscale));
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx.cpPresetColors == null ? null : ctx.cpPresetColors.length);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"])(1);
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"])("ngIf", ctx.cpOKButton || ctx.cpCancelButton);
         }
       },
-      directives: function directives() {
-        return [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgStyle"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgClass"], SliderDirective, TextDirective, _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgSwitch"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgSwitchCase"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgSwitchDefault"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"]];
-      },
+      directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgStyle"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgClass"], SliderDirective, TextDirective, _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgSwitch"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgSwitchCase"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgSwitchDefault"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["NgForOf"]],
       styles: [".color-picker[_ngcontent-%COMP%]{position:absolute;z-index:100000;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:#fff;box-shadow:0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12),0 5px 5px -3px rgba(0,0,0,.2);display:flex;flex-direction:column}.color-picker[_ngcontent-%COMP%]   *[_ngcontent-%COMP%]{box-sizing:border-box;margin:0;font-size:12px}.color-picker[_ngcontent-%COMP%]   .color-picker__arrow[_ngcontent-%COMP%]{height:0;width:0;border-style:solid;position:absolute;z-index:999999}.color-picker[_ngcontent-%COMP%]   .color-picker__arrow.color-picker__arrow--top[_ngcontent-%COMP%]{border-width:12px 6px;border-color:#999 transparent transparent;left:12px;bottom:-24px}.color-picker[_ngcontent-%COMP%]   .color-picker__arrow.color-picker__arrow--left[_ngcontent-%COMP%]{border-width:6px 12px;border-color:transparent transparent transparent #999;top:12px;left:230px}.color-picker[_ngcontent-%COMP%]   .color-picker__arrow.color-picker__arrow--right[_ngcontent-%COMP%]{border-width:6px 12px;border-color:transparent #999 transparent transparent;top:12px;left:-24px}.color-picker[_ngcontent-%COMP%]   .color-picker__arrow.color-picker__arrow--bottom[_ngcontent-%COMP%]{border-width:12px 6px;border-color:transparent transparent #999;top:-24px;left:12px}.color-picker[_ngcontent-%COMP%]   .color-picker__cursor[_ngcontent-%COMP%]{cursor:pointer;position:absolute;border-radius:50%;width:16px;height:16px;border:2px solid #222;margin:0 -8px;transition:border .2s linear}.color-picker[_ngcontent-%COMP%]   .color-picker__cursor.color-picker__cursor--sv[_ngcontent-%COMP%]{margin:-8px}.color-picker[_ngcontent-%COMP%]   .color-picker__cursor.color-picker__cursor--light[_ngcontent-%COMP%]{border-color:#dadada}.color-picker[_ngcontent-%COMP%]   .color-picker__sv[_ngcontent-%COMP%]{position:relative;direction:ltr;width:100%;height:130px;border:none;cursor:pointer;touch-action:manipulation;background-image:linear-gradient(to bottom,rgba(0,0,0,0) 0,#000 100%),linear-gradient(to right,#fff 0,rgba(255,255,255,0) 100%);background-size:100% 100%}.color-picker[_ngcontent-%COMP%]   .color-picker__controls[_ngcontent-%COMP%]{display:flex;margin:8px;align-items:center}.color-picker[_ngcontent-%COMP%]   .color-picker__controls[_ngcontent-%COMP%]   .color-picker__selected[_ngcontent-%COMP%]{margin:4px;flex:48px 0 0}.color-picker[_ngcontent-%COMP%]   .color-picker__controls[_ngcontent-%COMP%]   .color-picker__hav[_ngcontent-%COMP%]{margin:-4px -4px -4px 0;flex:auto 1 1}.color-picker[_ngcontent-%COMP%]   .color-picker__selected-color[_ngcontent-%COMP%]{width:48px;height:48px;display:flex;align-items:stretch;justify-content:stretch;border-radius:50%;background-size:16px;background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAgMTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cmVjdCBmaWxsPSIjQ0NDQ0NDIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiLz48cmVjdCB4PSI1MCIgeT0iNTAiIGZpbGw9IiNDQ0NDQ0MiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIvPjxyZWN0IHk9IjUwIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiLz48cmVjdCB4PSI1MCIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIi8+PC9zdmc+);background-repeat:repeat;box-shadow:0 0 8px -2px rgba(0,0,0,.5)}.color-picker[_ngcontent-%COMP%]   .color-picker__selected-color[_ngcontent-%COMP%]   div[_ngcontent-%COMP%]{width:100%;height:100%;border-radius:50%}.color-picker[_ngcontent-%COMP%]   .color-picker__add-selected[_ngcontent-%COMP%]{background:0 0;border:none;padding:0;width:100%;margin:0;color:#222;transition:color .2s linear;display:flex;align-items:center;justify-content:center;height:100%}.color-picker[_ngcontent-%COMP%]   .color-picker__add-selected[_ngcontent-%COMP%]   svg[_ngcontent-%COMP%]{fill:currentColor;width:24px;height:auto}.color-picker[_ngcontent-%COMP%]   .color-picker__add-selected.color-picker__add-selected--light[_ngcontent-%COMP%]{color:#dadada}.color-picker[_ngcontent-%COMP%]   .color-picker__hav[_ngcontent-%COMP%]{display:flex;flex-wrap:wrap}.color-picker[_ngcontent-%COMP%]   .color-picker__slider[_ngcontent-%COMP%]{width:100%;flex:100% 1 1;height:16px;margin:8px;position:relative}.color-picker[_ngcontent-%COMP%]   .color-picker__slider.color-picker__slider--hue[_ngcontent-%COMP%]{background-size:100% 100%;background-image:linear-gradient(to right,red 0,#ff0 16.6666666667%,#0f0 33.3333333333%,#0ff 50%,#00f 66.6666666667%,#f0f 83.3333333333%,red 100%)}.color-picker[_ngcontent-%COMP%]   .color-picker__slider.color-picker__slider--value[_ngcontent-%COMP%]{background-size:100% 100%;background-image:linear-gradient(to right,#000 0,#fff 100%)}.color-picker[_ngcontent-%COMP%]   .color-picker__slider.color-picker__slider--alpha[_ngcontent-%COMP%]{background-size:16px;background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAgMTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cmVjdCBmaWxsPSIjQ0NDQ0NDIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiLz48cmVjdCB4PSI1MCIgeT0iNTAiIGZpbGw9IiNDQ0NDQ0MiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIvPjxyZWN0IHk9IjUwIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiLz48cmVjdCB4PSI1MCIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIi8+PC9zdmc+);background-repeat:repeat}.color-picker[_ngcontent-%COMP%]   .color-picker__slider.color-picker__slider--alpha[_ngcontent-%COMP%]   .color-picker__slider--alpha-bg[_ngcontent-%COMP%]{position:absolute;top:0;left:0;right:0;bottom:0}.color-picker[_ngcontent-%COMP%]   .color-picker__inputs[_ngcontent-%COMP%]{display:flex;margin:8px;align-items:flex-start}.color-picker[_ngcontent-%COMP%]   .color-picker__inputs[_ngcontent-%COMP%]   .color-picker__input-fields[_ngcontent-%COMP%]{flex:auto 1 1}.color-picker[_ngcontent-%COMP%]   .color-picker__inputs[_ngcontent-%COMP%]   .color-picker__input-type[_ngcontent-%COMP%]{flex:24px 0 0}.color-picker[_ngcontent-%COMP%]   .color-picker__input-fields[_ngcontent-%COMP%]{display:flex}.color-picker[_ngcontent-%COMP%]   .color-picker__input-fields[_ngcontent-%COMP%]   .color-picker__input-field[_ngcontent-%COMP%]{margin:4px;display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:center;flex:20% 1 1}.color-picker[_ngcontent-%COMP%]   .color-picker__input-fields[_ngcontent-%COMP%]   .color-picker__input-field[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]{text-align:center;font-size:12px;height:24px;-webkit-appearance:none;-moz-appearance:none;appearance:none;flex:100% 1 1;padding:1px;border:1px solid #999;width:100%;background:0 0;min-width:0}.color-picker[_ngcontent-%COMP%]   .color-picker__input-fields[_ngcontent-%COMP%]   .color-picker__input-field[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]:invalid{box-shadow:none}.color-picker[_ngcontent-%COMP%]   .color-picker__input-fields[_ngcontent-%COMP%]   .color-picker__input-field[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]::-webkit-inner-spin-button, .color-picker[_ngcontent-%COMP%]   .color-picker__input-fields[_ngcontent-%COMP%]   .color-picker__input-field[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]::-webkit-outer-spin-button{-webkit-appearance:none;appearance:none;margin:0}.color-picker[_ngcontent-%COMP%]   .color-picker__input-fields[_ngcontent-%COMP%]   .color-picker__input-field[_ngcontent-%COMP%]   .color-picker__input-field-label[_ngcontent-%COMP%]{flex:100% 1 1;display:block;text-align:center;margin-top:4px}.color-picker[_ngcontent-%COMP%]   .color-picker__input-type[_ngcontent-%COMP%]{width:24px;height:24px;margin-top:4px;display:flex;flex-wrap:wrap;background-size:contain;background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAgMTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjMzMzMzMzIiBwb2ludHM9IjUwIDE2IDMwIDQ0IDcwIDQ0ICIvPjxwb2x5Z29uIGZpbGw9IiMzMzMzMzMiIHBvaW50cz0iNTAgODQgNzAgNTYgMzAgNTYgIi8+PC9zdmc+);background-repeat:no-repeat;background-position:center}.color-picker[_ngcontent-%COMP%]   .color-picker__input-type[_ngcontent-%COMP%]   .color-picker__input-type-arrow[_ngcontent-%COMP%]{display:block;cursor:pointer;flex:100% 1 1;width:100%;height:50%}.color-picker[_ngcontent-%COMP%]   .color-picker__separator[_ngcontent-%COMP%]{border-top:1px solid #999;margin-left:8px;margin-right:8px;flex:100% 1 1}.color-picker[_ngcontent-%COMP%]   .color-picker__preset[_ngcontent-%COMP%]{display:flex;margin:8px;align-items:center;flex-wrap:wrap}.color-picker[_ngcontent-%COMP%]   .color-picker__preset-label[_ngcontent-%COMP%]{margin:4px;flex:100% 1 1}.color-picker[_ngcontent-%COMP%]   .color-picker__preset-items[_ngcontent-%COMP%]{display:flex;flex:100% 1 1;flex-wrap:wrap;align-items:flex-start}.color-picker[_ngcontent-%COMP%]   .color-picker__preset-items[_ngcontent-%COMP%]   .color-picker__preset-item[_ngcontent-%COMP%]{position:relative;flex:20px 1 1;background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAgMTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cmVjdCBmaWxsPSIjQ0NDQ0NDIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiLz48cmVjdCB4PSI1MCIgeT0iNTAiIGZpbGw9IiNDQ0NDQ0MiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIvPjxyZWN0IHk9IjUwIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiLz48cmVjdCB4PSI1MCIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIi8+PC9zdmc+);background-size:100% 100%;margin:4px;border-radius:4px;border:1px solid #999;cursor:pointer}.color-picker[_ngcontent-%COMP%]   .color-picker__preset-items[_ngcontent-%COMP%]   .color-picker__preset-item[_ngcontent-%COMP%]   .color-picker__preset-item-fill[_ngcontent-%COMP%]{position:relative;width:100%;padding-bottom:100%;border-radius:calc(4px - 1px)}.color-picker[_ngcontent-%COMP%]   .color-picker__preset-items[_ngcontent-%COMP%]   .color-picker__preset-item[_ngcontent-%COMP%]:empty{margin-top:0;margin-bottom:0;border-top:0;border-bottom:0}.color-picker[_ngcontent-%COMP%]   .color-picker__remove-selected[_ngcontent-%COMP%]{border:none;padding:0;margin:0;color:#222;transition:color .2s linear;align-items:center;justify-content:center;box-shadow:0 0 8px -2px rgba(0,0,0,.5);position:absolute;width:12px;height:12px;right:-6px;top:-6px;background:#fff;border-radius:50%;display:flex}.color-picker[_ngcontent-%COMP%]   .color-picker__remove-selected[_ngcontent-%COMP%]   svg[_ngcontent-%COMP%]{fill:currentColor;width:100%;height:auto}.color-picker[_ngcontent-%COMP%]   .color-picker__buttons[_ngcontent-%COMP%]{display:flex;margin:0 8px 8px;align-items:center;flex-wrap:wrap;justify-content:flex-end}.color-picker[_ngcontent-%COMP%]   .color-picker__buttons[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{flex:auto 0 0;margin:4px}"]
     });
+    /*@__PURE__*/
 
-    ColorPickerComponent.ctorParameters = function () {
-      return [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]
+    (function () {
+      Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"])(ColorPickerComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+          selector: 'cp-color-picker',
+          templateUrl: './color-picker.component.html',
+          styleUrls: ['./color-picker.component.scss'],
+          encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewEncapsulation"].Emulated
+        }]
+      }], function () {
+        return [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"]
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]
+        }, {
+          type: ColorPickerService
+        }];
       }, {
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]
-      }, {
-        type: ColorPickerService
-      }];
-    };
-
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('dialogPopup', {
-      "static": true
-    }), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"])], ColorPickerComponent.prototype, "dialogElement", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('document:keyup.esc', ['$event']), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Function), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Event]), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:returntype", void 0)], ColorPickerComponent.prototype, "onCancel", null);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('document:keyup.enter', ['$event']), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Function), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Event]), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:returntype", void 0)], ColorPickerComponent.prototype, "onAccept", null);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('document:mousedown', ['$event']), Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('document:focusin', ['$event']), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Function), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Object]), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:returntype", void 0)], ColorPickerComponent.prototype, "onFocusChange", null);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('window:resize'), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Function), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", []), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:returntype", void 0)], ColorPickerComponent.prototype, "onResize", null);
-    ColorPickerComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"], ColorPickerService])], ColorPickerComponent);
+        dialogElement: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
+          args: ['dialogPopup', {
+            "static": true
+          }]
+        }],
+        onCancel: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"],
+          args: ['document:keyup.esc', ['$event']]
+        }],
+        onAccept: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"],
+          args: ['document:keyup.enter', ['$event']]
+        }],
+        onFocusChange: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"],
+          args: ['document:mousedown', ['$event']]
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"],
+          args: ['document:focusin', ['$event']]
+        }],
+        onResize: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"],
+          args: ['window:resize']
+        }]
+      });
+    })();
 
     var ColorPickerDirective =
     /*#__PURE__*/
@@ -2813,23 +2718,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.cpRemoveColorButtonText = 'Remove color';
         this.cpMaxPresetColors = 6;
         this.cpUseRootViewContainer = false;
-        this.cpOpen = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"](true);
-        this.cpClose = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"](true);
-        this.cpInputChange = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"](true);
-        this.cpToggleChange = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"](true);
-        this.cpSliderDragStart = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"](true);
-        this.cpSliderChange = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"](true);
-        this.cpSliderDragEnd = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"](true);
-        this.cpColorSelect = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"](true);
-        this.cpColorSelectCancel = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"](true);
-        this.cpColorChange = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"](false);
-        this.cpPresetColorsChange = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"](true);
+        this.cpOpen = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"](true);
+        this.cpClose = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"](true);
+        this.cpInputChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"](true);
+        this.cpToggleChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"](true);
+        this.cpSliderDragStart = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"](true);
+        this.cpSliderChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"](true);
+        this.cpSliderDragEnd = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"](true);
+        this.cpColorSelect = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"](true);
+        this.cpColorSelectCancel = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"](true);
+        this.cpColorChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"](false);
+        this.cpPresetColorsChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"](true);
       }
 
       _createClass(ColorPickerDirective, [{
         key: "handleOpen",
         value: function handleOpen(event) {
-          var path = new Set(event.composedPath());
+          var path = new Set(composedPath(event));
           var ignored = this.ignoredElements.find(function (el) {
             return path.has(el);
           });
@@ -2949,15 +2854,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }();
 
     ColorPickerDirective.ɵfac = function ColorPickerDirective_Factory(t) {
-      return new (t || ColorPickerDirective)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injector"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ComponentFactoryResolver"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ApplicationRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]));
+      return new (t || ColorPickerDirective)(Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"])(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"]), Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"])(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"]), Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"])(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationRef"]), Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"])(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"]), Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"])(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"]));
     };
 
-    ColorPickerDirective.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineDirective"]({
+    ColorPickerDirective.ɵdir = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineDirective"])({
       type: ColorPickerDirective,
       selectors: [["", "cpColor", ""]],
       hostBindings: function ColorPickerDirective_HostBindings(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("focus", function ColorPickerDirective_focus_HostBindingHandler($event) {
+          Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"])("focus", function ColorPickerDirective_focus_HostBindingHandler($event) {
             return ctx.handleOpen($event);
           })("click", function ColorPickerDirective_click_HostBindingHandler($event) {
             return ctx.handleOpen($event);
@@ -2969,6 +2874,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
       },
       inputs: {
+        cpColor: "cpColor",
         cpWidth: "cpWidth",
         cpHeight: "cpHeight",
         cpToggle: "cpToggle",
@@ -2981,6 +2887,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         cpPositionOffset: "cpPositionOffset",
         cpPositionRelativeToArrow: "cpPositionRelativeToArrow",
         cpPresetLabel: "cpPresetLabel",
+        cpPresetColors: "cpPresetColors",
         cpDisableInput: "cpDisableInput",
         cpDialogDisplay: "cpDialogDisplay",
         cpIgnoredElements: "cpIgnoredElements",
@@ -2994,9 +2901,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         cpAddColorButtonText: "cpAddColorButtonText",
         cpRemoveColorButtonText: "cpRemoveColorButtonText",
         cpMaxPresetColors: "cpMaxPresetColors",
-        cpUseRootViewContainer: "cpUseRootViewContainer",
-        cpColor: "cpColor",
-        cpPresetColors: "cpPresetColors"
+        cpUseRootViewContainer: "cpUseRootViewContainer"
       },
       outputs: {
         cpOpen: "cpOpen",
@@ -3011,600 +2916,193 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         cpColorChange: "cpColorChange",
         cpPresetColorsChange: "cpPresetColorsChange"
       },
-      features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵNgOnChangesFeature"]()]
-    });
-
-    ColorPickerDirective.ctorParameters = function () {
-      return [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injector"]
-      }, {
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ComponentFactoryResolver"]
-      }, {
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ApplicationRef"]
-      }, {
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"]
-      }, {
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]
-      }];
-    };
-
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], ColorPickerDirective.prototype, "cpColor", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], ColorPickerDirective.prototype, "cpWidth", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], ColorPickerDirective.prototype, "cpHeight", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)], ColorPickerDirective.prototype, "cpToggle", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)], ColorPickerDirective.prototype, "cpDisabled", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], ColorPickerDirective.prototype, "cpMode", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], ColorPickerDirective.prototype, "cpOutputFormat", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], ColorPickerDirective.prototype, "cpAlphaChannel", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], ColorPickerDirective.prototype, "cpFallbackColor", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], ColorPickerDirective.prototype, "cpPosition", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], ColorPickerDirective.prototype, "cpPositionOffset", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)], ColorPickerDirective.prototype, "cpPositionRelativeToArrow", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], ColorPickerDirective.prototype, "cpPresetLabel", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Array)], ColorPickerDirective.prototype, "cpPresetColors", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)], ColorPickerDirective.prototype, "cpDisableInput", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], ColorPickerDirective.prototype, "cpDialogDisplay", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], ColorPickerDirective.prototype, "cpIgnoredElements", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)], ColorPickerDirective.prototype, "cpSaveClickOutside", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)], ColorPickerDirective.prototype, "cpCloseClickOutside", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)], ColorPickerDirective.prototype, "cpOKButton", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], ColorPickerDirective.prototype, "cpOKButtonText", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)], ColorPickerDirective.prototype, "cpCancelButton", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], ColorPickerDirective.prototype, "cpCancelButtonText", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)], ColorPickerDirective.prototype, "cpAddColorButton", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], ColorPickerDirective.prototype, "cpAddColorButtonText", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], ColorPickerDirective.prototype, "cpRemoveColorButtonText", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], ColorPickerDirective.prototype, "cpMaxPresetColors", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Boolean)], ColorPickerDirective.prototype, "cpUseRootViewContainer", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], ColorPickerDirective.prototype, "cpOpen", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], ColorPickerDirective.prototype, "cpClose", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], ColorPickerDirective.prototype, "cpInputChange", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], ColorPickerDirective.prototype, "cpToggleChange", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], ColorPickerDirective.prototype, "cpSliderDragStart", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], ColorPickerDirective.prototype, "cpSliderChange", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], ColorPickerDirective.prototype, "cpSliderDragEnd", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], ColorPickerDirective.prototype, "cpColorSelect", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], ColorPickerDirective.prototype, "cpColorSelectCancel", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], ColorPickerDirective.prototype, "cpColorChange", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], ColorPickerDirective.prototype, "cpPresetColorsChange", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('focus', ['$event']), Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('click', ['$event']), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Function), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Event]), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:returntype", void 0)], ColorPickerDirective.prototype, "handleOpen", null);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('input', ['$event']), Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('change', ['$event']), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Function), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Event]), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:returntype", void 0)], ColorPickerDirective.prototype, "handleInput", null);
-    ColorPickerDirective = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injector"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ComponentFactoryResolver"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ApplicationRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]])], ColorPickerDirective);
-
-    var SliderDirective =
-    /*#__PURE__*/
-    function () {
-      function SliderDirective(elRef) {
-        _classCallCheck(this, SliderDirective);
-
-        this.elRef = elRef;
-        this.isMoving = false;
-        this.dragEnd = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
-        this.dragStart = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
-        this.newValue = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
-      }
-
-      _createClass(SliderDirective, [{
-        key: "onStart",
-        value: function onStart(event) {
-          event.stopPropagation();
-          event.preventDefault();
-          this.setCursor(event);
-          this.isMoving = true;
-          this.dragStart.emit();
-        }
-      }, {
-        key: "onMove",
-        value: function onMove(event) {
-          if (this.isMoving) {
-            event.stopPropagation();
-            event.preventDefault();
-            this.setCursor(event);
-          }
-        }
-      }, {
-        key: "onStop",
-        value: function onStop(event) {
-          if (this.isMoving) {
-            event.stopPropagation();
-            event.preventDefault();
-            this.isMoving = false;
-            this.dragEnd.emit();
-          }
-        }
-      }, {
-        key: "getX",
-        value: function getX(event) {
-          var position = this.elRef.nativeElement.getBoundingClientRect();
-          var pageX = 'pageX' in event ? event.pageX : event.touches[0].pageX;
-          return pageX - position.left - window.pageXOffset;
-        }
-      }, {
-        key: "getY",
-        value: function getY(event) {
-          var position = this.elRef.nativeElement.getBoundingClientRect();
-          var pageY = 'pageX' in event ? event.pageY : event.touches[0].pageY;
-          return pageY - position.top - window.pageYOffset;
-        }
-      }, {
-        key: "setCursor",
-        value: function setCursor(event) {
-          var width = this.elRef.nativeElement.offsetWidth;
-          var height = this.elRef.nativeElement.offsetHeight;
-          var x = Math.max(0, Math.min(this.getX(event), width));
-          var y = Math.max(0, Math.min(this.getY(event), height));
-
-          if (this.rgX != undefined && this.rgY != undefined) {
-            this.newValue.emit({
-              s: x / width,
-              v: 1 - y / height,
-              rgX: this.rgX,
-              rgY: this.rgY
-            });
-          } else if (this.rgX == undefined && this.rgY != undefined) {
-            this.newValue.emit({
-              v: y / height,
-              rgY: this.rgY
-            });
-          } else if (this.rgX != undefined && this.rgY == undefined) {
-            this.newValue.emit({
-              v: x / width,
-              rgX: this.rgX
-            });
-          }
-        }
-      }]);
-
-      return SliderDirective;
-    }();
-
-    SliderDirective.ɵfac = function SliderDirective_Factory(t) {
-      return new (t || SliderDirective)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]));
-    };
-
-    SliderDirective.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineDirective"]({
-      type: SliderDirective,
-      selectors: [["", "cpSlider", ""]],
-      hostBindings: function SliderDirective_HostBindings(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("mousedown", function SliderDirective_mousedown_HostBindingHandler($event) {
-            return ctx.onStart($event);
-          })("touchstart", function SliderDirective_touchstart_HostBindingHandler($event) {
-            return ctx.onStart($event);
-          })("mousemove", function SliderDirective_mousemove_HostBindingHandler($event) {
-            return ctx.onMove($event);
-          }, false, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵresolveDocument"])("touchmove", function SliderDirective_touchmove_HostBindingHandler($event) {
-            return ctx.onMove($event);
-          }, false, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵresolveDocument"])("mouseup", function SliderDirective_mouseup_HostBindingHandler($event) {
-            return ctx.onStop($event);
-          }, false, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵresolveDocument"])("touchend", function SliderDirective_touchend_HostBindingHandler($event) {
-            return ctx.onStop($event);
-          }, false, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵresolveDocument"]);
-        }
-      },
-      inputs: {
-        rgX: "rgX",
-        rgY: "rgY",
-        slider: "slider"
-      },
-      outputs: {
-        dragEnd: "dragEnd",
-        dragStart: "dragStart",
-        newValue: "newValue"
-      }
-    });
-
-    SliderDirective.ctorParameters = function () {
-      return [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]
-      }];
-    };
-
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], SliderDirective.prototype, "rgX", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], SliderDirective.prototype, "rgY", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", String)], SliderDirective.prototype, "slider", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], SliderDirective.prototype, "dragEnd", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], SliderDirective.prototype, "dragStart", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], SliderDirective.prototype, "newValue", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('mousedown', ['$event']), Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('touchstart', ['$event']), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Function), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Object]), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:returntype", void 0)], SliderDirective.prototype, "onStart", null);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('document:mousemove', ['$event']), Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('document:touchmove', ['$event']), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Function), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Object]), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:returntype", void 0)], SliderDirective.prototype, "onMove", null);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('document:mouseup', ['$event']), Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('document:touchend', ['$event']), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Function), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Object]), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:returntype", void 0)], SliderDirective.prototype, "onStop", null);
-    SliderDirective = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]])], SliderDirective);
-
-    var TextDirective =
-    /*#__PURE__*/
-    function () {
-      function TextDirective() {
-        _classCallCheck(this, TextDirective);
-
-        this.newValue = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
-      }
-
-      _createClass(TextDirective, [{
-        key: "inputChange",
-        value: function inputChange(event) {
-          var value = ((event && event.target && event.target['value'] || '') + '').trim();
-
-          if (this.rg == undefined) {
-            this.newValue.emit(value);
-          } else {
-            var numeric = parseFloat(value);
-            this.newValue.emit({
-              v: numeric,
-              rg: this.rg
-            });
-          }
-        }
-      }]);
-
-      return TextDirective;
-    }();
-
-    TextDirective.ɵfac = function TextDirective_Factory(t) {
-      return new (t || TextDirective)();
-    };
-
-    TextDirective.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineDirective"]({
-      type: TextDirective,
-      selectors: [["", "cpText", ""]],
-      hostBindings: function TextDirective_HostBindings(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("input", function TextDirective_input_HostBindingHandler($event) {
-            return ctx.inputChange($event);
-          })("change", function TextDirective_change_HostBindingHandler($event) {
-            return ctx.inputChange($event);
-          });
-        }
-      },
-      inputs: {
-        rg: "rg",
-        text: "text"
-      },
-      outputs: {
-        newValue: "newValue"
-      }
-    });
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Number)], TextDirective.prototype, "rg", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], TextDirective.prototype, "text", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Object)], TextDirective.prototype, "newValue", void 0);
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('input', ['$event']), Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('change', ['$event']), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:type", Function), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:paramtypes", [Event]), Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"])("design:returntype", void 0)], TextDirective.prototype, "inputChange", null);
-
-    var ColorPickerModule = function ColorPickerModule() {
-      _classCallCheck(this, ColorPickerModule);
-    };
-
-    ColorPickerModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({
-      type: ColorPickerModule
-    });
-    ColorPickerModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({
-      factory: function ColorPickerModule_Factory(t) {
-        return new (t || ColorPickerModule)();
-      },
-      imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"]]]
+      features: [Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵNgOnChangesFeature"])()]
     });
     /*@__PURE__*/
 
     (function () {
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](ColorPickerService, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"],
-        args: [{
-          providedIn: 'root'
-        }]
-      }], function () {
-        return [];
-      }, null);
-    })();
-    /*@__PURE__*/
-
-
-    (function () {
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](ColorPickerComponent, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
-        args: [{
-          selector: 'cp-color-picker',
-          template: "<div #dialogPopup\n    class=\"color-picker\"\n    (click)=\"$event.stopPropagation()\"\n    [ngStyle]=\"{\n        visibility: hidden || !show ? 'hidden' : 'visible',\n        'top.px': top || 0,\n        'left.px': left || 0,\n        position: position || undefined,\n        width: cpWidth || 'auto',\n        height: cpHeight || 'auto'\n    }\">\n    <div *ngIf=\"cpDialogDisplay == dialogDisplay.popup\"\n        class=\"color-picker__arrow\"\n        [ngClass]=\"'color-picker__arrow--' + cpPosition\"></div>\n    <div *ngIf=\"cpMode == colorModeInternal.color\"\n        class=\"color-picker__sv\"\n        cpSlider\n        [rgX]=\"1\"\n        [rgY]=\"1\"\n        (newValue)=\"onColorChange($event)\"\n        (dragStart)=\"onDragStart('saturation-lightness')\"\n        (dragEnd)=\"onDragEnd('saturation-lightness')\"\n        [ngStyle]=\"{ \n            backgroundColor: hueSliderColor || ''\n        }\">\n        <div class=\"color-picker__cursor color-picker__cursor--sv\"\n            [ngClass]=\"{ 'color-picker__cursor--light': svSliderLight }\"\n            [ngStyle]=\"{\n                top: (slider?.v || 0) * 100 + '%',\n                left: (slider?.s || 0) * 100 + '%'\n            }\"></div>\n    </div>\n    <div class=\"color-picker__controls\">\n        <div class=\"color-picker__selected\">\n            <div class=\"color-picker__selected-color\">\n                <div [ngStyle]=\"{ \n                    backgroundColor: selectedColor || ''\n                }\"><button\n                        *ngIf=\"cpAddColorButton && !(cpMaxPresetColors && (cpPresetColors?.length || 0) >= cpMaxPresetColors)\"\n                        type=\"button\"\n                        [title]=\"cpAddColorButtonText\"\n                        class=\"color-picker__add-selected\"\n                        [ngClass]=\"{ 'color-picker__add-selected--light': alphaSliderLight }\"\n                        (click)=\"onAddPresetColor(selectedColor)\"><svg xmlns=\"http://www.w3.org/2000/svg\"\n                            width=\"24\"\n                            height=\"24\"\n                            viewBox=\"0 0 24 24\">\n                            <path d=\"M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z\" />\n                            <path d=\"M0 0h24v24H0z\"\n                                fill=\"none\" /></svg></button></div>\n            </div>\n        </div>\n        <div class=\"color-picker__hav\">\n            <div *ngIf=\"cpMode == colorModeInternal.color\"\n                class=\"color-picker__slider color-picker__slider--hue\"\n                cpSlider\n                [rgX]=\"1\"\n                (newValue)=\"onHueChange($event)\"\n                (dragStart)=\"onDragStart('hue')\"\n                (dragEnd)=\"onDragEnd('hue')\">\n                <div class=\"color-picker__cursor\"\n                    [ngClass]=\"{ 'color-picker__cursor--light': hueSliderLight }\"\n                    [ngStyle]=\"{\n                        left: (slider?.h || 0) * 100 + '%'\n                    }\"></div>\n            </div>\n            <div *ngIf=\"cpMode == colorModeInternal.grayscale\"\n                class=\"color-picker__slider color-picker__slider--value\"\n                cpSlider\n                [rgX]=\"1\"\n                (newValue)=\"onValueChange($event)\"\n                (dragStart)=\"onDragStart('value')\"\n                (dragEnd)=\"onDragEnd('value')\">\n                <div class=\"color-picker__cursor\"\n                    [ngClass]=\"{ 'color-picker__cursor--light': valueSliderLight }\"\n                    [ngStyle]=\"{\n                        left: (1 - (slider?.v || 0)) * 100 + '%'\n                    }\"></div>\n            </div>\n            <div *ngIf=\"cpAlphaChannel != alphaChannel.disabled\"\n                class=\"color-picker__slider color-picker__slider--alpha\"\n                cpSlider\n                [rgX]=\"1\"\n                (newValue)=\"onAlphaChange($event)\"\n                (dragStart)=\"onDragStart('alpha')\"\n                (dragEnd)=\"onDragEnd('alpha')\">\n                <div class=\"color-picker__slider--alpha-bg\"\n                    [ngStyle]=\"{\n                        backgroundImage: alphaSliderColor || ''\n                    }\">\n                    <div class=\"color-picker__cursor\"\n                        [ngClass]=\"{ 'color-picker__cursor--light': alphaSliderLight }\"\n                        [ngStyle]=\"{\n                            left: (slider?.a || 0) * 100 + '%'\n                        }\"></div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div *ngIf=\"!cpDisableInput && (cpMode == colorModeInternal.color || cpMode == colorModeInternal.grayscale)\"\n        class=\"color-picker__inputs\">\n        <div class=\"color-picker__input-fields\">\n            <ng-container *ngIf=\"cpMode == colorModeInternal.grayscale; else formatSwitch\">\n                <div class=\"color-picker__input-field\">\n                    <input type=\"number\"\n                        pattern=\"[0-9]*\"\n                        min=\"0\"\n                        max=\"100\"\n                        cpText\n                        [rg]=\"100\"\n                        [value]=\"hslaText?.l\"\n                        (keyup.enter)=\"onAccept($event)\"\n                        (newValue)=\"onValueInput($event)\" />\n                    <span class=\"color-picker__input-field-label\">V</span>\n                </div>\n                <div *ngIf=\"cpAlphaChannel != alphaChannel.disabled\"\n                    class=\"color-picker__input-field\">\n                    <input type=\"number\"\n                        pattern=\"[0-9]+([\\.,][0-9]{1,2})?\"\n                        min=\"0\"\n                        max=\"1\"\n                        step=\"0.1\"\n                        cpText\n                        [rg]=\"1\"\n                        [value]=\"hslaText?.a\"\n                        (keyup.enter)=\"onAccept($event)\"\n                        (newValue)=\"onAlphaInput($event)\" />\n                    <span class=\"color-picker__input-field-label\">A</span>\n                </div>\n            </ng-container>\n            <ng-template #formatSwitch>\n                <ng-container [ngSwitch]=\"format\">\n                    <ng-container *ngSwitchCase=\"colorFormat.hsla\">\n                        <div class=\"color-picker__input-field\">\n                            <input type=\"number\"\n                                pattern=\"[0-9]*\"\n                                min=\"0\"\n                                max=\"360\"\n                                cpText\n                                [rg]=\"360\"\n                                [value]=\"hslaText?.h\"\n                                (keyup.enter)=\"onAccept($event)\"\n                                (newValue)=\"onHueInput($event)\" />\n                            <span class=\"color-picker__input-field-label\">H</span>\n                        </div>\n                        <div class=\"color-picker__input-field\">\n                            <input type=\"number\"\n                                pattern=\"[0-9]*\"\n                                min=\"0\"\n                                max=\"100\"\n                                cpText\n                                [rg]=\"100\"\n                                [value]=\"hslaText?.s\"\n                                (keyup.enter)=\"onAccept($event)\"\n                                (newValue)=\"onSaturationInput($event)\" />\n                            <span class=\"color-picker__input-field-label\">S</span>\n                        </div>\n                        <div class=\"color-picker__input-field\">\n                            <input type=\"number\"\n                                pattern=\"[0-9]*\"\n                                min=\"0\"\n                                max=\"100\"\n                                cpText\n                                [rg]=\"100\"\n                                [value]=\"hslaText?.l\"\n                                (keyup.enter)=\"onAccept($event)\"\n                                (newValue)=\"onLightnessInput($event)\" />\n                            <span class=\"color-picker__input-field-label\">L</span>\n                        </div>\n                        <div *ngIf=\"cpAlphaChannel != alphaChannel.disabled\"\n                            class=\"color-picker__input-field\">\n                            <input type=\"number\"\n                                pattern=\"[0-9]+([\\.,][0-9]{1,2})?\"\n                                min=\"0\"\n                                max=\"1\"\n                                step=\"0.1\"\n                                cpText\n                                [rg]=\"1\"\n                                [value]=\"hslaText?.a\"\n                                (keyup.enter)=\"onAccept($event)\"\n                                (newValue)=\"onAlphaInput($event)\" />\n                            <span class=\"color-picker__input-field-label\">A</span>\n                        </div>\n                    </ng-container>\n                    <ng-container *ngSwitchCase=\"colorFormat.rgba\">\n                        <div class=\"color-picker__input-field\">\n                            <input type=\"number\"\n                                pattern=\"[0-9]*\"\n                                min=\"0\"\n                                max=\"255\"\n                                cpText\n                                [rg]=\"255\"\n                                [value]=\"rgbaText?.r\"\n                                (keyup.enter)=\"onAccept($event)\"\n                                (newValue)=\"onRedInput($event)\" />\n                            <span class=\"color-picker__input-field-label\">R</span>\n                        </div>\n                        <div class=\"color-picker__input-field\">\n                            <input type=\"number\"\n                                pattern=\"[0-9]*\"\n                                min=\"0\"\n                                max=\"255\"\n                                cpText\n                                [rg]=\"255\"\n                                [value]=\"rgbaText?.g\"\n                                (keyup.enter)=\"onAccept($event)\"\n                                (newValue)=\"onGreenInput($event)\" />\n                            <span class=\"color-picker__input-field-label\">G</span>\n                        </div>\n                        <div class=\"color-picker__input-field\">\n                            <input type=\"number\"\n                                pattern=\"[0-9]*\"\n                                min=\"0\"\n                                max=\"255\"\n                                cpText\n                                [rg]=\"255\"\n                                [value]=\"rgbaText?.b\"\n                                (keyup.enter)=\"onAccept($event)\"\n                                (newValue)=\"onBlueInput($event)\" />\n                            <span class=\"color-picker__input-field-label\">B</span>\n                        </div>\n                        <div *ngIf=\"cpAlphaChannel != alphaChannel.disabled\"\n                            class=\"color-picker__input-field\">\n                            <input type=\"number\"\n                                pattern=\"[0-9]+([\\.,][0-9]{1,2})?\"\n                                min=\"0\"\n                                max=\"1\"\n                                step=\"0.1\"\n                                cpText\n                                [rg]=\"1\"\n                                [value]=\"hslaText?.a\"\n                                (keyup.enter)=\"onAccept($event)\"\n                                (newValue)=\"onAlphaInput($event)\" />\n                            <span class=\"color-picker__input-field-label\">A</span>\n                        </div>\n                    </ng-container>\n                    <ng-container *ngSwitchDefault>\n                        <div class=\"color-picker__input-field\">\n                            <input cpText\n                                [value]=\"hexText\"\n                                (blur)=\"onHexInput(null)\"\n                                (keyup.enter)=\"onAccept($event)\"\n                                (newValue)=\"onHexInput($event)\" />\n                            <span class=\"color-picker__input-field-label\">Hex</span>\n                        </div>\n                        <div *ngIf=\"cpAlphaChannel == alphaChannel.forced\"\n                            class=\"color-picker__input-field\">\n                            <input type=\"number\"\n                                pattern=\"[0-9]+([\\.,][0-9]{1,2})?\"\n                                min=\"0\"\n                                max=\"1\"\n                                step=\"0.1\"\n                                cpText\n                                [rg]=\"1\"\n                                [value]=\"hexAlpha\"\n                                (keyup.enter)=\"onAccept($event)\"\n                                (newValue)=\"onAlphaInput($event)\" />\n                            <span class=\"color-picker__input-field-label\">A</span>\n                        </div>\n                    </ng-container>\n                </ng-container>\n            </ng-template>\n        </div>\n        <div *ngIf=\"cpMode == colorModeInternal.color\"\n            class=\"color-picker__input-type\">\n            <span class=\"color-picker__input-type-arrow\"\n                (click)=\"onFormatToggle(1)\"></span>\n            <span class=\"color-picker__input-type-arrow\"\n                (click)=\"onFormatToggle(-1)\"></span>\n        </div>\n    </div>\n    <ng-container *ngIf=\"cpPresetColors?.length\">\n        <div class=\"color-picker__separator\"></div>\n        <div class=\"color-picker__preset\">\n            <div *ngIf=\"cpPresetLabel\"\n                class=\"color-picker__preset-label\">{{ cpPresetLabel }}</div>\n            <div *ngIf=\"cpPresetColors?.length\"\n                class=\"color-picker__preset-items\">\n                <div *ngFor=\"let color of cpPresetColors\"\n                    class=\"color-picker__preset-item\"\n                    [title]=\"color\"\n                    (click)=\"setColorFromString(color)\">\n                    <div class=\"color-picker__preset-item-fill\"\n                        [ngStyle]=\"{ \n                        backgroundColor: color || ''\n                    }\"><button *ngIf=\"cpAddColorButton\"\n                            type=\"button\"\n                            [title]=\"cpRemoveColorButtonText\"\n                            class=\"color-picker__remove-selected\"\n                            (click)=\"onRemovePresetColor(color)\"><svg xmlns=\"http://www.w3.org/2000/svg\"\n                                width=\"24\"\n                                height=\"24\"\n                                viewBox=\"0 0 24 24\">\n                                <path\n                                    d=\"M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z\" />\n                                <path d=\"M0 0h24v24H0z\"\n                                    fill=\"none\" /></svg></button></div>\n                </div>\n                <div *ngFor=\"let i of fill(50)\"\n                    class=\"color-picker__preset-item\"></div>\n            </div>\n        </div>\n    </ng-container>\n    <div *ngIf=\"cpOKButton || cpCancelButton\"\n        class=\"color-picker__buttons\">\n        <button *ngIf=\"cpCancelButton\"\n            type=\"button\"\n            (click)=\"onCancel($event)\">{{ cpCancelButtonText }}</button>\n        <button *ngIf=\"cpOKButton\"\n            type=\"button\"\n            (click)=\"onAccept($event)\">{{ cpOKButtonText }}</button>\n    </div>\n</div>\n",
-          encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewEncapsulation"].Emulated,
-          styles: [".color-picker{position:absolute;z-index:100000;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:#fff;box-shadow:0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12),0 5px 5px -3px rgba(0,0,0,.2);display:flex;flex-direction:column}.color-picker *{box-sizing:border-box;margin:0;font-size:12px}.color-picker .color-picker__arrow{height:0;width:0;border-style:solid;position:absolute;z-index:999999}.color-picker .color-picker__arrow.color-picker__arrow--top{border-width:12px 6px;border-color:#999 transparent transparent;left:12px;bottom:-24px}.color-picker .color-picker__arrow.color-picker__arrow--left{border-width:6px 12px;border-color:transparent transparent transparent #999;top:12px;left:230px}.color-picker .color-picker__arrow.color-picker__arrow--right{border-width:6px 12px;border-color:transparent #999 transparent transparent;top:12px;left:-24px}.color-picker .color-picker__arrow.color-picker__arrow--bottom{border-width:12px 6px;border-color:transparent transparent #999;top:-24px;left:12px}.color-picker .color-picker__cursor{cursor:pointer;position:absolute;border-radius:50%;width:16px;height:16px;border:2px solid #222;margin:0 -8px;transition:border .2s linear}.color-picker .color-picker__cursor.color-picker__cursor--sv{margin:-8px}.color-picker .color-picker__cursor.color-picker__cursor--light{border-color:#dadada}.color-picker .color-picker__sv{position:relative;direction:ltr;width:100%;height:130px;border:none;cursor:pointer;touch-action:manipulation;background-image:linear-gradient(to bottom,rgba(0,0,0,0) 0,#000 100%),linear-gradient(to right,#fff 0,rgba(255,255,255,0) 100%);background-size:100% 100%}.color-picker .color-picker__controls{display:flex;margin:8px;align-items:center}.color-picker .color-picker__controls .color-picker__selected{margin:4px;flex:48px 0 0}.color-picker .color-picker__controls .color-picker__hav{margin:-4px -4px -4px 0;flex:auto 1 1}.color-picker .color-picker__selected-color{width:48px;height:48px;display:flex;align-items:stretch;justify-content:stretch;border-radius:50%;background-size:16px;background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAgMTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cmVjdCBmaWxsPSIjQ0NDQ0NDIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiLz48cmVjdCB4PSI1MCIgeT0iNTAiIGZpbGw9IiNDQ0NDQ0MiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIvPjxyZWN0IHk9IjUwIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiLz48cmVjdCB4PSI1MCIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIi8+PC9zdmc+);background-repeat:repeat;box-shadow:0 0 8px -2px rgba(0,0,0,.5)}.color-picker .color-picker__selected-color div{width:100%;height:100%;border-radius:50%}.color-picker .color-picker__add-selected{background:0 0;border:none;padding:0;width:100%;margin:0;color:#222;transition:color .2s linear;display:flex;align-items:center;justify-content:center;height:100%}.color-picker .color-picker__add-selected svg{fill:currentColor;width:24px;height:auto}.color-picker .color-picker__add-selected.color-picker__add-selected--light{color:#dadada}.color-picker .color-picker__hav{display:flex;flex-wrap:wrap}.color-picker .color-picker__slider{width:100%;flex:100% 1 1;height:16px;margin:8px;position:relative}.color-picker .color-picker__slider.color-picker__slider--hue{background-size:100% 100%;background-image:linear-gradient(to right,red 0,#ff0 16.6666666667%,#0f0 33.3333333333%,#0ff 50%,#00f 66.6666666667%,#f0f 83.3333333333%,red 100%)}.color-picker .color-picker__slider.color-picker__slider--value{background-size:100% 100%;background-image:linear-gradient(to right,#000 0,#fff 100%)}.color-picker .color-picker__slider.color-picker__slider--alpha{background-size:16px;background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAgMTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cmVjdCBmaWxsPSIjQ0NDQ0NDIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiLz48cmVjdCB4PSI1MCIgeT0iNTAiIGZpbGw9IiNDQ0NDQ0MiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIvPjxyZWN0IHk9IjUwIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiLz48cmVjdCB4PSI1MCIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIi8+PC9zdmc+);background-repeat:repeat}.color-picker .color-picker__slider.color-picker__slider--alpha .color-picker__slider--alpha-bg{position:absolute;top:0;left:0;right:0;bottom:0}.color-picker .color-picker__inputs{display:flex;margin:8px;align-items:flex-start}.color-picker .color-picker__inputs .color-picker__input-fields{flex:auto 1 1}.color-picker .color-picker__inputs .color-picker__input-type{flex:24px 0 0}.color-picker .color-picker__input-fields{display:flex}.color-picker .color-picker__input-fields .color-picker__input-field{margin:4px;display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:center;flex:20% 1 1}.color-picker .color-picker__input-fields .color-picker__input-field input{text-align:center;font-size:12px;height:24px;-webkit-appearance:none;-moz-appearance:none;appearance:none;flex:100% 1 1;padding:1px;border:1px solid #999;width:100%;background:0 0;min-width:0}.color-picker .color-picker__input-fields .color-picker__input-field input:invalid{box-shadow:none}.color-picker .color-picker__input-fields .color-picker__input-field input::-webkit-inner-spin-button,.color-picker .color-picker__input-fields .color-picker__input-field input::-webkit-outer-spin-button{-webkit-appearance:none;appearance:none;margin:0}.color-picker .color-picker__input-fields .color-picker__input-field .color-picker__input-field-label{flex:100% 1 1;display:block;text-align:center;margin-top:4px}.color-picker .color-picker__input-type{width:24px;height:24px;margin-top:4px;display:flex;flex-wrap:wrap;background-size:contain;background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAgMTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjMzMzMzMzIiBwb2ludHM9IjUwIDE2IDMwIDQ0IDcwIDQ0ICIvPjxwb2x5Z29uIGZpbGw9IiMzMzMzMzMiIHBvaW50cz0iNTAgODQgNzAgNTYgMzAgNTYgIi8+PC9zdmc+);background-repeat:no-repeat;background-position:center}.color-picker .color-picker__input-type .color-picker__input-type-arrow{display:block;cursor:pointer;flex:100% 1 1;width:100%;height:50%}.color-picker .color-picker__separator{border-top:1px solid #999;margin-left:8px;margin-right:8px;flex:100% 1 1}.color-picker .color-picker__preset{display:flex;margin:8px;align-items:center;flex-wrap:wrap}.color-picker .color-picker__preset-label{margin:4px;flex:100% 1 1}.color-picker .color-picker__preset-items{display:flex;flex:100% 1 1;flex-wrap:wrap;align-items:flex-start}.color-picker .color-picker__preset-items .color-picker__preset-item{position:relative;flex:20px 1 1;background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAgMTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cmVjdCBmaWxsPSIjQ0NDQ0NDIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiLz48cmVjdCB4PSI1MCIgeT0iNTAiIGZpbGw9IiNDQ0NDQ0MiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIvPjxyZWN0IHk9IjUwIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiLz48cmVjdCB4PSI1MCIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIi8+PC9zdmc+);background-size:100% 100%;margin:4px;border-radius:4px;border:1px solid #999;cursor:pointer}.color-picker .color-picker__preset-items .color-picker__preset-item .color-picker__preset-item-fill{position:relative;width:100%;padding-bottom:100%;border-radius:calc(4px - 1px)}.color-picker .color-picker__preset-items .color-picker__preset-item:empty{margin-top:0;margin-bottom:0;border-top:0;border-bottom:0}.color-picker .color-picker__remove-selected{border:none;padding:0;margin:0;color:#222;transition:color .2s linear;align-items:center;justify-content:center;box-shadow:0 0 8px -2px rgba(0,0,0,.5);position:absolute;width:12px;height:12px;right:-6px;top:-6px;background:#fff;border-radius:50%;display:flex}.color-picker .color-picker__remove-selected svg{fill:currentColor;width:100%;height:auto}.color-picker .color-picker__buttons{display:flex;margin:0 8px 8px;align-items:center;flex-wrap:wrap;justify-content:flex-end}.color-picker .color-picker__buttons button{flex:auto 0 0;margin:4px}"]
-        }]
-      }], function () {
-        return [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]
-        }, {
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]
-        }, {
-          type: ColorPickerService
-        }];
-      }, {
-        onCancel: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"],
-          args: ['document:keyup.esc', ['$event']]
-        }],
-        onAccept: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"],
-          args: ['document:keyup.enter', ['$event']]
-        }],
-        onFocusChange: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"],
-          args: ['document:mousedown', ['$event']]
-        }, {
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"],
-          args: ['document:focusin', ['$event']]
-        }],
-        onResize: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"],
-          args: ['window:resize']
-        }],
-        dialogElement: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"],
-          args: ['dialogPopup', {
-            "static": true
-          }]
-        }]
-      });
-    })();
-    /*@__PURE__*/
-
-
-    (function () {
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](ColorPickerDirective, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"],
+      Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"])(ColorPickerDirective, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"],
         args: [{
           selector: '[cpColor]'
         }]
       }], function () {
         return [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injector"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"]
         }, {
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ComponentFactoryResolver"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ComponentFactoryResolver"]
         }, {
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ApplicationRef"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ApplicationRef"]
         }, {
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewContainerRef"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewContainerRef"]
         }, {
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"]
         }];
       }, {
+        cpColor: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }],
         cpWidth: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }],
         cpHeight: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }],
         cpToggle: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }],
         cpDisabled: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }],
         cpMode: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }],
         cpOutputFormat: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }],
         cpAlphaChannel: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }],
         cpFallbackColor: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }],
         cpPosition: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }],
         cpPositionOffset: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }],
         cpPositionRelativeToArrow: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }],
         cpPresetLabel: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }],
+        cpPresetColors: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }],
         cpDisableInput: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }],
         cpDialogDisplay: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }],
         cpIgnoredElements: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }],
         cpSaveClickOutside: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }],
         cpCloseClickOutside: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }],
         cpOKButton: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }],
         cpOKButtonText: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }],
         cpCancelButton: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }],
         cpCancelButtonText: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }],
         cpAddColorButton: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }],
         cpAddColorButtonText: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }],
         cpRemoveColorButtonText: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }],
         cpMaxPresetColors: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }],
         cpUseRootViewContainer: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }],
         cpOpen: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
         }],
         cpClose: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
         }],
         cpInputChange: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
         }],
         cpToggleChange: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
         }],
         cpSliderDragStart: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
         }],
         cpSliderChange: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
         }],
         cpSliderDragEnd: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
         }],
         cpColorSelect: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
         }],
         cpColorSelectCancel: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
         }],
         cpColorChange: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
         }],
         cpPresetColorsChange: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"]
         }],
         handleOpen: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"],
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"],
           args: ['focus', ['$event']]
         }, {
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"],
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"],
           args: ['click', ['$event']]
         }],
         handleInput: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"],
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"],
           args: ['input', ['$event']]
         }, {
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"],
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["HostListener"],
           args: ['change', ['$event']]
-        }],
-        cpColor: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
-        }],
-        cpPresetColors: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
         }]
+      });
+    })();
+
+    var ColorPickerModule = function ColorPickerModule() {
+      _classCallCheck(this, ColorPickerModule);
+    };
+
+    ColorPickerModule.ɵmod = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"])({
+      type: ColorPickerModule
+    });
+    ColorPickerModule.ɵinj = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"])({
+      factory: function ColorPickerModule_Factory(t) {
+        return new (t || ColorPickerModule)();
+      },
+      imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]]]
+    });
+
+    (function () {
+      (typeof ngJitMode === "undefined" || ngJitMode) && Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"])(ColorPickerModule, {
+        declarations: [TextDirective, SliderDirective, ColorPickerComponent, ColorPickerDirective],
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]],
+        exports: [ColorPickerDirective]
       });
     })();
     /*@__PURE__*/
 
 
     (function () {
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](SliderDirective, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"],
-        args: [{
-          selector: '[cpSlider]'
-        }]
-      }], function () {
-        return [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]
-        }];
-      }, {
-        dragEnd: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
-        }],
-        dragStart: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
-        }],
-        newValue: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
-        }],
-        onStart: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"],
-          args: ['mousedown', ['$event']]
-        }, {
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"],
-          args: ['touchstart', ['$event']]
-        }],
-        onMove: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"],
-          args: ['document:mousemove', ['$event']]
-        }, {
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"],
-          args: ['document:touchmove', ['$event']]
-        }],
-        onStop: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"],
-          args: ['document:mouseup', ['$event']]
-        }, {
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"],
-          args: ['document:touchend', ['$event']]
-        }],
-        rgX: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
-        }],
-        rgY: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
-        }],
-        slider: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
-        }]
-      });
-    })();
-    /*@__PURE__*/
-
-
-    (function () {
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](TextDirective, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"],
-        args: [{
-          selector: '[cpText]'
-        }]
-      }], function () {
-        return [];
-      }, {
-        newValue: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"]
-        }],
-        inputChange: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"],
-          args: ['input', ['$event']]
-        }, {
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"],
-          args: ['change', ['$event']]
-        }],
-        rg: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
-        }],
-        text: [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
-        }]
-      });
-    })();
-
-    (function () {
-      (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](ColorPickerModule, {
-        declarations: function declarations() {
-          return [TextDirective, SliderDirective, ColorPickerComponent, ColorPickerDirective];
-        },
-        imports: function imports() {
-          return [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"]];
-        },
-        exports: function exports() {
-          return [ColorPickerDirective];
-        }
-      });
-    })();
-    /*@__PURE__*/
-
-
-    (function () {
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](ColorPickerModule, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
+      Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"])(ColorPickerModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
         args: [{
           declarations: [TextDirective, SliderDirective, ColorPickerComponent, ColorPickerDirective],
-          imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"]],
+          imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]],
           exports: [ColorPickerDirective],
           entryComponents: [ColorPickerComponent]
         }]
@@ -3683,7 +3181,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var nxt_color_picker__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! nxt-color-picker */
-    "../../dist/nxt-color-picker/__ivy_ngcc__/fesm2015/nxt-color-picker.js");
+    "../../dist/nxt-color-picker/fesm2015/nxt-color-picker.js");
 
     var _c0 = function _c0() {
       return ["#fff", "#000", "#2889e9", "#e920e9", "#fff500", "rgb(236,64,64)"];
@@ -5975,7 +5473,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var nxt_color_picker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! nxt-color-picker */
-    "../../dist/nxt-color-picker/__ivy_ngcc__/fesm2015/nxt-color-picker.js");
+    "../../dist/nxt-color-picker/fesm2015/nxt-color-picker.js");
     /* harmony import */
 
 
