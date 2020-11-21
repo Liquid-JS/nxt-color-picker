@@ -4,16 +4,17 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>nxt-color-picker</title>
-	<meta name="description" content="">
+	<meta name="description" content="Documentation for nxt-color-picker">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
 </head>
 <body>
 <header>
 	<div class="tsd-page-toolbar">
 		<div class="container">
 			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
 						<input id="tsd-search-field" type="text" />
@@ -38,8 +39,8 @@
 							</div>
 							<input type="checkbox" id="tsd-filter-inherited" checked />
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -49,9 +50,7 @@
 	</div>
 	<div class="tsd-page-title">
 		<div class="container">
-			<ul class="tsd-breadcrumb">
-			</ul>
-			<h1> nxt-color-picker</h1>
+			<h1>Project nxt-color-picker</h1>
 		</div>
 	</div>
 </header>
@@ -99,11 +98,11 @@ yarn start</code></pre>
 				<a href="#load-the-module-for-your-app" id="load-the-module-for-your-app" style="color: inherit; text-decoration: none;">
 					<h5>Load the module for your app:</h5>
 				</a>
-				<pre><code class="language-javascript"><span class="hljs-keyword">import</span> { ColorPickerModule } <span class="hljs-keyword">from</span> <span class="hljs-string">'nxt-color-picker'</span>;
+				<pre><code class="language-javascript"><span class="hljs-keyword">import</span> { ColorPickerModule } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;nxt-color-picker&#x27;</span>;
 
 @NgModule({
   ...
-  imports: [
+  <span class="hljs-attr">imports</span>: [
     ...
     ColorPickerModule
   ]
@@ -111,26 +110,26 @@ yarn start</code></pre>
 				<a href="#use-it-in-your-html-template" id="use-it-in-your-html-template" style="color: inherit; text-decoration: none;">
 					<h5>Use it in your HTML template:</h5>
 				</a>
-				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> [(<span class="hljs-attr">cpColor</span>)]=<span class="hljs-string">"color"</span> [<span class="hljs-attr">style.background</span>]=<span class="hljs-string">"color"</span>/&gt;</span></code></pre>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> [(<span class="hljs-attr">cpColor</span>)]=<span class="hljs-string">&quot;color&quot;</span> [<span class="hljs-attr">style.background</span>]=<span class="hljs-string">&quot;color&quot;</span>/&gt;</span></code></pre>
 				<pre><code class="language-javascript">[cpColor]                    <span class="hljs-comment">// The color to show in the color picker dialog.</span>
 
-[cpWidth]                    <span class="hljs-comment">// Use this option to set color picker dialog width ('230px').</span>
-[cpHeight]                   <span class="hljs-comment">// Use this option to force color picker dialog height ('auto').</span>
+[cpWidth]                    <span class="hljs-comment">// Use this option to set color picker dialog width (&#x27;230px&#x27;).</span>
+[cpHeight]                   <span class="hljs-comment">// Use this option to force color picker dialog height (&#x27;auto&#x27;).</span>
 
 [cpToggle]                   <span class="hljs-comment">// Sets the default open / close state of the color picker (false).</span>
 [cpDisabled]                 <span class="hljs-comment">// Disables opening of the color picker dialog via toggle / events.</span>
 
-[cpMode]                     <span class="hljs-comment">// Dialog color mode: 'color', 'grayscale', 'presets' ('color').</span>
+[cpMode]                     <span class="hljs-comment">// Dialog color mode: &#x27;color&#x27;, &#x27;grayscale&#x27;, &#x27;presets&#x27; (&#x27;color&#x27;).</span>
 
 [cpOutputFormat]             <span class="hljs-comment">// Output color format: OutputFormat (OutputFormat.auto).</span>
 [cpAlphaChannel]             <span class="hljs-comment">// Alpha mode: AlphaChannel (AlphaChannel.enabled).</span>
-[cpFallbackColor]            <span class="hljs-comment">// Used when the color is not well-formed or is undefined ('#000').</span>
+[cpFallbackColor]            <span class="hljs-comment">// Used when the color is not well-formed or is undefined (&#x27;#000&#x27;).</span>
 
 [cpPosition]                 <span class="hljs-comment">// Dialog position: DialogPosition (DialogPosition.right).</span>
 [cpPositionOffset]           <span class="hljs-comment">// Dialog offset percentage relative to the directive element (0%).</span>
 [cpPositionRelativeToArrow]  <span class="hljs-comment">// Dialog position is calculated relative to dialog arrow (false).</span>
 
-[cpPresetLabel]              <span class="hljs-comment">// Label text for the preset colors if any provided ('Preset colors').</span>
+[cpPresetLabel]              <span class="hljs-comment">// Label text for the preset colors if any provided (&#x27;Preset colors&#x27;).</span>
 [cpPresetColors]             <span class="hljs-comment">// Array of preset colors to show in the color picker dialog ([]).</span>
 
 [cpDisableInput]             <span class="hljs-comment">// Disables / hides the color input field from the dialog (false).</span>
@@ -145,14 +144,14 @@ yarn start</code></pre>
 [cpCloseClickOutside]        <span class="hljs-comment">// Close the color picker dialog when user clicks outside (true).</span>
 
 [cpOKButton]                 <span class="hljs-comment">// Show an OK / Apply button which saves the color (false).</span>
-[cpOKButtonText]             <span class="hljs-comment">// Button label text shown inside the OK / Apply button ('OK').</span>
+[cpOKButtonText]             <span class="hljs-comment">// Button label text shown inside the OK / Apply button (&#x27;OK&#x27;).</span>
 
 [cpCancelButton]             <span class="hljs-comment">// Show a Cancel / Reset button which resets the color (false).</span>
-[cpCancelButtonText]         <span class="hljs-comment">// Button label text shown inside the Cancel / Reset button ('Cancel').</span>
+[cpCancelButtonText]         <span class="hljs-comment">// Button label text shown inside the Cancel / Reset button (&#x27;Cancel&#x27;).</span>
 
 [cpAddColorButton]           <span class="hljs-comment">// Show an Add Color button which add the color into preset (false).</span>
-[cpAddColorButtonText]       <span class="hljs-comment">// Button label text shown inside the Add Color button ('Add color to preset').</span>
-[cpRemoveColorButtonText]    <span class="hljs-comment">// Button label text shown inside the Remove Color button ('Remove Color').</span>
+[cpAddColorButtonText]       <span class="hljs-comment">// Button label text shown inside the Add Color button (&#x27;Add color to preset&#x27;).</span>
+[cpRemoveColorButtonText]    <span class="hljs-comment">// Button label text shown inside the Remove Color button (&#x27;Remove Color&#x27;).</span>
 
 [cpMaxPresetColors]          <span class="hljs-comment">// Use this option to set the max colors allowed in presets (6).</span>
 
@@ -174,7 +173,7 @@ yarn start</code></pre>
 (cpColorSelect)              <span class="hljs-comment">// Selected color value, send when OK button pressed or user clicks outside (if cpSaveClickOutside is true). (value: string).</span>
 (cpColorChange)              <span class="hljs-comment">// Changed color value, send when color is changed (value: string).</span>
 
-(cpPresetColorsChange)       <span class="hljs-comment">// Preset colors, send when 'Add Color' button is pressed (value: array).</span></code></pre>
+(cpPresetColorsChange)       <span class="hljs-comment">// Preset colors, send when &#x27;Add Color&#x27; button is pressed (value: array).</span></code></pre>
 				<a href="#available-control--helper-functions-provided-by-the-directive" id="available-control--helper-functions-provided-by-the-directive" style="color: inherit; text-decoration: none;">
 					<h5>Available control / helper functions (provided by the directive):</h5>
 				</a>
@@ -185,13 +184,100 @@ closeDialog()                <span class="hljs-comment">// Closes the color pick
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
-					<li class=" tsd-kind-external-module">
-						<a href="globals.html">nxt-<wbr>color-<wbr>picker</a>
+					<li class=" ">
+						<a href="modules.html">Exports</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-enum">
+						<a href="enums/alphachannel.html" class="tsd-kind-icon">Alpha<wbr>Channel</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/colorformat.html" class="tsd-kind-icon">Color<wbr>Format</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/dialogdisplay.html" class="tsd-kind-icon">Dialog<wbr>Display</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/dialogposition.html" class="tsd-kind-icon">Dialog<wbr>Position</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="enums/outputformat.html" class="tsd-kind-icon">Output<wbr>Format</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/cmyk.html" class="tsd-kind-icon">Cmyk</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/colorpickerdirective.html" class="tsd-kind-icon">Color<wbr>Picker<wbr>Directive</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/colorpickermodule.html" class="tsd-kind-icon">Color<wbr>Picker<wbr>Module</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/hsla.html" class="tsd-kind-icon">Hsla</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/hsva.html" class="tsd-kind-icon">Hsva</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/rgba.html" class="tsd-kind-icon">Rgba</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/inputchangeevent.html" class="tsd-kind-icon">Input<wbr>Change<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/sliderchangeevent.html" class="tsd-kind-icon">Slider<wbr>Change<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#colormode" class="tsd-kind-icon">Color<wbr>Mode</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#calculatecontrast" class="tsd-kind-icon">calculate<wbr>Contrast</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#calculateluminance" class="tsd-kind-icon">calculate<wbr>Luminance</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#calculateminimumalpha" class="tsd-kind-icon">calculate<wbr>Minimum<wbr>Alpha</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#compositealpha" class="tsd-kind-icon">composite<wbr>Alpha</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#compositecolors" class="tsd-kind-icon">composite<wbr>Colors</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#compositecomponent" class="tsd-kind-icon">composite<wbr>Component</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#denormalizergba" class="tsd-kind-icon">denormalizeRGBA</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#formatoutput" class="tsd-kind-icon">format<wbr>Output</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#hsla2hsva" class="tsd-kind-icon">hsla2hsva</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#hsva2hsla" class="tsd-kind-icon">hsva2hsla</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#hsvatorgba" class="tsd-kind-icon">hsva<wbr>ToRgba</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#rgbatocmyk" class="tsd-kind-icon">rgba<wbr>ToCmyk</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#rgbatohex" class="tsd-kind-icon">rgba<wbr>ToHex</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#rgbatohsva" class="tsd-kind-icon">rgba<wbr>ToHsva</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#stringtohsva" class="tsd-kind-icon">string<wbr>ToHsva</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
@@ -202,57 +288,16 @@ closeDialog()                <span class="hljs-comment">// Closes the color pick
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
-				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
-				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
-				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
-				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
-				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
-				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
-				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
-				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
-				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
-				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
-				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
 				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
 				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
-				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
 			</ul>
 		</div>
 	</div>
@@ -262,6 +307,5 @@ closeDialog()                <span class="hljs-comment">// Closes the color pick
 </div>
 <div class="overlay"></div>
 <script src="assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>
