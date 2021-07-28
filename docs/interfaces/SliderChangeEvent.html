@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>InputChangeEvent | nxt-color-picker</title>
+	<title>SliderChangeEvent | nxt-color-picker</title>
 	<meta name="description" content="Documentation for nxt-color-picker">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,10 +55,10 @@
 					<a href="../modules.html">nxt-color-picker</a>
 				</li>
 				<li>
-					<a href="inputchangeevent.html">InputChangeEvent</a>
+					<a href="SliderChangeEvent.html">SliderChangeEvent</a>
 				</li>
 			</ul>
-			<h1>Interface InputChangeEvent</h1>
+			<h1>Interface SliderChangeEvent</h1>
 		</div>
 	</div>
 </header>
@@ -69,7 +69,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">InputChangeEvent</span>
+						<span class="target">SliderChangeEvent</span>
 					</li>
 				</ul>
 			</section>
@@ -80,10 +80,9 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inputchangeevent.html#color" class="tsd-kind-icon">color</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inputchangeevent.html#input" class="tsd-kind-icon">input</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inputchangeevent.html#valid" class="tsd-kind-icon">valid</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="inputchangeevent.html#value" class="tsd-kind-icon">value</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="SliderChangeEvent.html#color" class="tsd-kind-icon">color</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="SliderChangeEvent.html#slider" class="tsd-kind-icon">slider</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="SliderChangeEvent.html#value" class="tsd-kind-icon">value</a></li>
 							</ul>
 						</section>
 					</div>
@@ -97,37 +96,27 @@
 					<div class="tsd-signature tsd-kind-icon">color<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Liquid-JS/nxt-color-picker/blob/6f36b2a/projects/nxt-color-picker/src/util/types.ts#L41">util/types.ts:41</a></li>
+							<li>Defined in <a href="https://github.com/Liquid-JS/nxt-color-picker/blob/1209fd4/projects/nxt-color-picker/src/util/types.ts#L47">util/types.ts:47</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="input" class="tsd-anchor"></a>
-					<h3>input</h3>
-					<div class="tsd-signature tsd-kind-icon">input<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="slider" class="tsd-anchor"></a>
+					<h3>slider</h3>
+					<div class="tsd-signature tsd-kind-icon">slider<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Liquid-JS/nxt-color-picker/blob/6f36b2a/projects/nxt-color-picker/src/util/types.ts#L38">util/types.ts:38</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="valid" class="tsd-anchor"></a>
-					<h3>valid</h3>
-					<div class="tsd-signature tsd-kind-icon">valid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/Liquid-JS/nxt-color-picker/blob/6f36b2a/projects/nxt-color-picker/src/util/types.ts#L39">util/types.ts:39</a></li>
+							<li>Defined in <a href="https://github.com/Liquid-JS/nxt-color-picker/blob/1209fd4/projects/nxt-color-picker/src/util/types.ts#L45">util/types.ts:45</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="value" class="tsd-anchor"></a>
-					<h3>value</h3>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> value</h3>
 					<div class="tsd-signature tsd-kind-icon">value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Liquid-JS/nxt-color-picker/blob/6f36b2a/projects/nxt-color-picker/src/util/types.ts#L40">util/types.ts:40</a></li>
+							<li>Defined in <a href="https://github.com/Liquid-JS/nxt-color-picker/blob/1209fd4/projects/nxt-color-picker/src/util/types.ts#L46">util/types.ts:46</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -144,91 +133,88 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-enum">
-						<a href="../enums/alphachannel.html" class="tsd-kind-icon">Alpha<wbr>Channel</a>
+						<a href="../enums/AlphaChannel.html" class="tsd-kind-icon">Alpha<wbr>Channel</a>
 					</li>
 					<li class=" tsd-kind-enum">
-						<a href="../enums/colorformat.html" class="tsd-kind-icon">Color<wbr>Format</a>
+						<a href="../enums/ColorFormat.html" class="tsd-kind-icon">Color<wbr>Format</a>
 					</li>
 					<li class=" tsd-kind-enum">
-						<a href="../enums/dialogdisplay.html" class="tsd-kind-icon">Dialog<wbr>Display</a>
+						<a href="../enums/DialogDisplay.html" class="tsd-kind-icon">Dialog<wbr>Display</a>
 					</li>
 					<li class=" tsd-kind-enum">
-						<a href="../enums/dialogposition.html" class="tsd-kind-icon">Dialog<wbr>Position</a>
+						<a href="../enums/DialogPosition.html" class="tsd-kind-icon">Dialog<wbr>Position</a>
 					</li>
 					<li class=" tsd-kind-enum">
-						<a href="../enums/outputformat.html" class="tsd-kind-icon">Output<wbr>Format</a>
+						<a href="../enums/OutputFormat.html" class="tsd-kind-icon">Output<wbr>Format</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="../classes/cmyk.html" class="tsd-kind-icon">Cmyk</a>
+						<a href="../classes/Cmyk.html" class="tsd-kind-icon">Cmyk</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="../classes/colorpickerdirective.html" class="tsd-kind-icon">Color<wbr>Picker<wbr>Directive</a>
+						<a href="../classes/ColorPickerDirective.html" class="tsd-kind-icon">Color<wbr>Picker<wbr>Directive</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="../classes/colorpickermodule.html" class="tsd-kind-icon">Color<wbr>Picker<wbr>Module</a>
+						<a href="../classes/ColorPickerModule.html" class="tsd-kind-icon">Color<wbr>Picker<wbr>Module</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="../classes/hsla.html" class="tsd-kind-icon">Hsla</a>
+						<a href="../classes/Hsla.html" class="tsd-kind-icon">Hsla</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="../classes/hsva.html" class="tsd-kind-icon">Hsva</a>
+						<a href="../classes/Hsva.html" class="tsd-kind-icon">Hsva</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="../classes/rgba.html" class="tsd-kind-icon">Rgba</a>
+						<a href="../classes/Rgba.html" class="tsd-kind-icon">Rgba</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="InputChangeEvent.html" class="tsd-kind-icon">Input<wbr>Change<wbr>Event</a>
 					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="inputchangeevent.html" class="tsd-kind-icon">Input<wbr>Change<wbr>Event</a>
+						<a href="SliderChangeEvent.html" class="tsd-kind-icon">Slider<wbr>Change<wbr>Event</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="inputchangeevent.html#color" class="tsd-kind-icon">color</a>
+								<a href="SliderChangeEvent.html#color" class="tsd-kind-icon">color</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="inputchangeevent.html#input" class="tsd-kind-icon">input</a>
+								<a href="SliderChangeEvent.html#slider" class="tsd-kind-icon">slider</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="inputchangeevent.html#valid" class="tsd-kind-icon">valid</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="inputchangeevent.html#value" class="tsd-kind-icon">value</a>
+								<a href="SliderChangeEvent.html#value" class="tsd-kind-icon">value</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface">
-						<a href="sliderchangeevent.html" class="tsd-kind-icon">Slider<wbr>Change<wbr>Event</a>
-					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="../modules.html#colormode" class="tsd-kind-icon">Color<wbr>Mode</a>
+						<a href="../modules.html#ColorMode" class="tsd-kind-icon">Color<wbr>Mode</a>
 					</li>
 					<li class=" tsd-kind-variable">
-						<a href="../modules.html#alphaenabledformats" class="tsd-kind-icon">Alpha<wbr>Enabled<wbr>Formats</a>
+						<a href="../modules.html#AlphaEnabledFormats" class="tsd-kind-icon">Alpha<wbr>Enabled<wbr>Formats</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../modules.html#calculatecontrast" class="tsd-kind-icon">calculate<wbr>Contrast</a>
+						<a href="../modules.html#calculateContrast" class="tsd-kind-icon">calculate<wbr>Contrast</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../modules.html#calculateluminance" class="tsd-kind-icon">calculate<wbr>Luminance</a>
+						<a href="../modules.html#calculateLuminance" class="tsd-kind-icon">calculate<wbr>Luminance</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../modules.html#calculateminimumalpha" class="tsd-kind-icon">calculate<wbr>Minimum<wbr>Alpha</a>
+						<a href="../modules.html#calculateMinimumAlpha" class="tsd-kind-icon">calculate<wbr>Minimum<wbr>Alpha</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../modules.html#compositealpha" class="tsd-kind-icon">composite<wbr>Alpha</a>
+						<a href="../modules.html#compositeAlpha" class="tsd-kind-icon">composite<wbr>Alpha</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../modules.html#compositecolors" class="tsd-kind-icon">composite<wbr>Colors</a>
+						<a href="../modules.html#compositeColors" class="tsd-kind-icon">composite<wbr>Colors</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../modules.html#compositecomponent" class="tsd-kind-icon">composite<wbr>Component</a>
+						<a href="../modules.html#compositeComponent" class="tsd-kind-icon">composite<wbr>Component</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../modules.html#denormalizergba" class="tsd-kind-icon">denormalizeRGBA</a>
+						<a href="../modules.html#denormalizeRGBA" class="tsd-kind-icon">denormalizeRGBA</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../modules.html#formatoutput" class="tsd-kind-icon">format<wbr>Output</a>
+						<a href="../modules.html#formatOutput" class="tsd-kind-icon">format<wbr>Output</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="../modules.html#hsla2hsva" class="tsd-kind-icon">hsla2hsva</a>
@@ -237,19 +223,19 @@
 						<a href="../modules.html#hsva2hsla" class="tsd-kind-icon">hsva2hsla</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../modules.html#hsvatorgba" class="tsd-kind-icon">hsva<wbr>ToRgba</a>
+						<a href="../modules.html#hsvaToRgba" class="tsd-kind-icon">hsva<wbr>ToRgba</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../modules.html#rgbatocmyk" class="tsd-kind-icon">rgba<wbr>ToCmyk</a>
+						<a href="../modules.html#rgbaToCmyk" class="tsd-kind-icon">rgba<wbr>ToCmyk</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../modules.html#rgbatohex" class="tsd-kind-icon">rgba<wbr>ToHex</a>
+						<a href="../modules.html#rgbaToHex" class="tsd-kind-icon">rgba<wbr>ToHex</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../modules.html#rgbatohsva" class="tsd-kind-icon">rgba<wbr>ToHsva</a>
+						<a href="../modules.html#rgbaToHsva" class="tsd-kind-icon">rgba<wbr>ToHsva</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="../modules.html#stringtohsva" class="tsd-kind-icon">string<wbr>ToHsva</a>
+						<a href="../modules.html#stringToHsva" class="tsd-kind-icon">string<wbr>ToHsva</a>
 					</li>
 				</ul>
 			</nav>
