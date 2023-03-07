@@ -1,3 +1,5 @@
+# Moved to https://github.com/Liquid-JS/nxt-components/tree/master/packages/color-picker
+
 # Angular Color Picker
 
 <a href="https://badge.fury.io/js/nxt-color-picker"><img src="https://badge.fury.io/js/nxt-color-picker.svg" align="right" alt="yarn version" height="18"></a>
